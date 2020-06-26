@@ -1,35 +1,88 @@
 @import '../../styles/colors.scss';
 
 .main {
-  font-weight: 700;
   color: $Black;
   
   .form {
-    height: 500px;
-    width: 500px;
-    margin: 50px auto;
-    padding: 10px;
+    margin:60px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p{
+      font-size: 20px;
+      letter-spacing: 1px;
+      font-weight: 400;
+      
+    }
+
+    .span {
+      display: inline-block;
+      height: 1px;
+      width: 350px;
+      margin-top: 2px;
+      margin-bottom: 30px;
+      background-color: $Black;
+    }  
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+     
+  
+      input[type='password'],
+      input[type='email'],
+      input[type='text'] {
+        margin: 10px;
+        width: 100px;
+        
+      }
+    }
+    .btn:hover {
+      background-color: #ff5edf;
+    }
 
     .input-grp {
       position: relative;
+      
       .input {
         margin: 20px;
-        //border: none;
         padding: 5px;
+        width: 300px;
       }
       .icon {
         color: $Black;
       }
 
       .label {
+       
+        margin-bottom: 50px;
         position: absolute;
-        top: -4px;
-        left: 0px;
-      }
+        top: 0px;
+        left: 18px;
+     }
+    }
+    .btn {
+      text-transform: uppercase;
+      background-color: $Black;
+      color: $white;
+      margin-top: 10px;
+      width: 200px;
+      height: 40px;
+      border: none;
     }
     .btn:hover {
-      background-color: $Black;
-      color: white;
+      background-color: $white;
+      color: $Black;
+      border: 1px solid $Black;
+    }
+    .new-customers {
+      margin-top: 30px;
+      .para {
+        width: 350px;
+        font-size: 80%;
+      }
+      
     }
   }
 }

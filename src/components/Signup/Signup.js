@@ -26,7 +26,7 @@ class Signup extends Component {
     return (
       <div class='main'>
         <form class='form'>
-          <p class='head'>Sign Up here!</p>
+          <p class='head'>Create new customer account</p>
           <span className='span'></span>
 
           {/* input */}
@@ -91,10 +91,9 @@ class Signup extends Component {
           {/* <p className='terms'>
               By signing up, you agree to our Terms of Use and Privacy Policy.
             </p> */}
-          <span className='span'></span>
-          <p className='login'>
-            Already have an account? <Link to='/signin'>Log In</Link>
-          </p>
+
+
+
         </form>
       </div>
     );

@@ -23,7 +23,7 @@ class Signin extends Component {
     return (
       <div className='main'>
         <form className='form'>
-          <p className='head'>Log In to you account here!</p>
+          <p className='head'>Customer Login</p>
           <span className='span'></span>
 
           <div className='input-grp'>
@@ -66,10 +66,11 @@ class Signin extends Component {
           <button onClick={this.props.handleSignin} className='btn'>
             Log In
           </button>
-          <span className='span'></span>
-          <p className='login'>
-            Don't have an account? <Link to='/signup'>Sign Up</Link>
-          </p>
+          <div className="new-customers">
+            <p>New Customers</p>
+            <p className="para">Creating an account has many benefits: check out faster, keep more than one address, track orders and more.</p>
+            <button className="btn">CREATE AN ACCOUNT</button>
+          </div>
         </form>
       </div>
     );
