@@ -1,0 +1,39 @@
+@import '../../styles/colors.scss';
+
+.main {
+  font-weight: 700;
+  color: #102542;
+  
+  .form {
+    height: 500px;
+    width: 500px;
+    margin: 50px auto;
+    padding: 10px;
+
+    .input-grp {
+      position: relative;
+      .input {
+        margin: 20px;
+        border: none;
+        padding: 5px;
+      }
+      .icon {
+        color: #102542;
+      }
+
+      .label {
+        position: absolute;
+        top: -4px;
+        left: 85px;
+      }
+    }
+    .btn:hover {
+      background-color: #102542;
+      color: white;
+    }
+  }
+}
+
+form + p {
+  margin-top: 100px;
+}

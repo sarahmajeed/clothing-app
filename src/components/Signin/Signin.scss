@@ -1,0 +1,22 @@
+.form {
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+
+    input[type='password'],
+    input[type='email'],
+    input[type='text'] {
+      margin: 10px;
+    }
+  }
+  .btn:hover {
+    background-color: #ff5edf;
+  }
+}
