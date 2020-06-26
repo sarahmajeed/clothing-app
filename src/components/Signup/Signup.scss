@@ -2,7 +2,7 @@
 
 .main {
   font-weight: 700;
-  color: #102542;
+  color: $Black;
   
   .form {
     height: 500px;
@@ -14,21 +14,21 @@
       position: relative;
       .input {
         margin: 20px;
-        border: none;
+        //border: none;
         padding: 5px;
       }
       .icon {
-        color: #102542;
+        color: $Black;
       }
 
       .label {
         position: absolute;
         top: -4px;
-        left: 85px;
+        left: 0px;
       }
     }
     .btn:hover {
-      background-color: #102542;
+      background-color: $Black;
       color: white;
     }
   }

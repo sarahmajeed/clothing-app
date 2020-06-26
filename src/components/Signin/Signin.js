@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import 'Signin.scss';
+import './Signin.scss';
 
 class Signin extends Component {
   constructor() {
