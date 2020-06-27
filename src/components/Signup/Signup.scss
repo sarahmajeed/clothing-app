@@ -2,6 +2,8 @@
 
 .main {
   color: $Black;
+  border: 1px solid transparent;
+  min-height: calc(100vh - 60px);
   
   .form {
     margin:60px auto;
@@ -37,11 +39,12 @@
         width: 100px;
         
       }
+      input[type='password']{
+        
+        letter-spacing: 3px;
+      }
     }
-    .btn:hover {
-      background-color: #ff5edf;
-    }
-
+    
     .input-grp {
       position: relative;
       
@@ -64,17 +67,18 @@
     }
     .buttons{
      
-     width: 330px;
+     width: 300px;
      display: flex;
      flex-direction: row;
      justify-content: space-between;
       display: flex;
       flex-direction: row;
+      margin-top: 20px;
       
       .back{
         cursor: pointer;
       .back-btn{
-        margin-top: 20px;
+        margin-top: 30px;
         border: none;
         background-color: transparent;
      }
@@ -96,6 +100,8 @@
       color: $Black;
       border: 1px solid $Black;
     }
+
+  
   }
     .new-customers {
       margin-top: 30px;

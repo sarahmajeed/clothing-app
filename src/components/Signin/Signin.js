@@ -63,14 +63,14 @@ class Signin extends Component {
             />
           </div>
 
-          <button onClick={this.props.handleSignin} className='button'>
+          <button onClick={this.props.handleSignin} className='btn'>
             Log In
           </button>
           <div className="new-customers">
             <p>New Customers</p>
             <p className="para">Creating an account has many benefits: check out faster, keep more than one address, track orders and more.</p>
             <Link to="/signup">
-              <button className="button">CREATE AN ACCOUNT</button>
+              <button className="btn">CREATE AN ACCOUNT</button>
             </Link>
           </div>
         </form>

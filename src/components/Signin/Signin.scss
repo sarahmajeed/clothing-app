@@ -1,6 +1,6 @@
 @import '../../styles/colors.scss';
 .form{
-.button {
+.btn {
       
   text-transform: uppercase;
   background-color: $Black;
@@ -13,7 +13,7 @@
   cursor: pointer;
   
 }
-.button:hover {
+.btn:hover {
   color: $Black;
   border: 1px solid $Black;
   background-color: $white;
