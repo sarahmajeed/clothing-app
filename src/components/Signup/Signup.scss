@@ -62,20 +62,41 @@
         left: 18px;
      }
     }
+    .buttons{
+     
+     width: 330px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+      display: flex;
+      flex-direction: row;
+      
+      .back{
+        cursor: pointer;
+      .back-btn{
+        margin-top: 20px;
+        border: none;
+        background-color: transparent;
+     }
+    }
     .btn {
+      
       text-transform: uppercase;
       background-color: $Black;
       color: $white;
       margin-top: 10px;
-      width: 200px;
+      margin-left: 12px;
+      width:100px;
       height: 40px;
       border: none;
+      cursor: pointer;
     }
     .btn:hover {
       background-color: $white;
       color: $Black;
       border: 1px solid $Black;
     }
+  }
     .new-customers {
       margin-top: 30px;
       .para {

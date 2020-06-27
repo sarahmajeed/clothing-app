@@ -85,9 +85,22 @@ class Signup extends Component {
             />
           </div>
 
-          <button onClick={this.props.handleSignin} className='btn'>
-            Sign Up
+          <div className="buttons">
+            <Link to="/signin">
+              <div className="back">
+
+                <i class="fas fa-arrow-left"></i>
+                <button className="back-btn" >Back</button>
+
+              </div>
+            </Link>
+
+
+            <button onClick={this.props.handleSignin} className='btn'>
+              Sign Up
           </button>
+
+          </div>
           {/* <p className='terms'>
               By signing up, you agree to our Terms of Use and Privacy Policy.
             </p> */}
