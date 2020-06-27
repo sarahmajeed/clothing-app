@@ -67,7 +67,7 @@ class Signin extends Component {
             Log In
           </button>
           <div className="new-customers">
-            <p>New Customers</p>
+            <p className="para0">New Customers</p>
             <p className="para">Creating an account has many benefits: check out faster, keep more than one address, track orders and more.</p>
             <Link to="/signup">
               <button className="btn">CREATE AN ACCOUNT</button>

@@ -18,7 +18,7 @@ function App() {
 
       {/* Footer */}
       <footer className="footer">
-        <p>Copyright &copy; | Brand | Clothing App</p>
+        <p className="copyright">Copyright &copy; | Brand | Clothing App</p>
       </footer>
     </div>
   );

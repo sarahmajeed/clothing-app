@@ -33,7 +33,7 @@ class Signup extends Component {
           <div className='input-grp'>
             <div className='label'>
               <label className='label' htmlFor='username'>
-                Name
+                Full Name
               </label>
             </div>
             {/* user-icon */}
@@ -43,6 +43,7 @@ class Signup extends Component {
               type='text'
               value={username}
               onChange={this.handleChange}
+              placeholder='Name'
               className='input'
               required
             />
@@ -62,6 +63,7 @@ class Signup extends Component {
               type='email'
               value={email}
               onChange={this.handleChange}
+              placeholder='Email'
               className='input'
               required
             />
@@ -80,6 +82,7 @@ class Signup extends Component {
               type='password'
               value={password}
               onChange={this.handleChange}
+              placeholder='Password'
               className='input'
               required
             />
@@ -87,12 +90,7 @@ class Signup extends Component {
 
           <div className="buttons">
             <Link to="/signin">
-              <div className="back">
-
-                <i class="fas fa-arrow-left"></i>
-                <button className="back-btn" >Back</button>
-
-              </div>
+              <button className="btn">Back</button>
             </Link>
 
 
