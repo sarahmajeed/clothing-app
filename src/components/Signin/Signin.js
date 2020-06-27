@@ -39,6 +39,7 @@ class Signin extends Component {
               value={email}
               name='email'
               type='text'
+              placeholder='Email'
               className='input'
               required
             />
@@ -57,7 +58,7 @@ class Signin extends Component {
               value={password}
               name='password'
               type='password'
-              //placeholder='Password'
+              placeholder='Password'
               className='input'
               required
             />
