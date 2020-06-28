@@ -1,0 +1,12 @@
+@import '../../styles/colors.scss';
+
+.about {
+  background-color: $Black;
+  color:$white;
+  .mission,.promise,.essence {
+    padding: 30px;
+    height: 100vh;
+    width: 100vh;
+  }
+  
+}     
