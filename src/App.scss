@@ -8,6 +8,7 @@
 }
 
 .App {
+  
   text-align: center;
   position: relative;
   min-height: 100vh;
@@ -49,7 +50,7 @@
 }
 
 .footer {
-  width: 100%;
+  width: 100vw;
   position: absolute;
   background-color: #1B1D1E;
   color: $dark-grey;

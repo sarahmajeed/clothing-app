@@ -5,36 +5,42 @@ const About = () => {
   return (
     <div className="about">
       <section className="mission">
-        <h1>Our mission</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, eos perspiciatis facere nisi recusandae, porro fugiat ducimus autem odit, cumque obcaecati. Dolorum hic aperiam adipisci eveniet eligendi consectetur accusantium magnam facere maiores delectus placeat ab temporibus neque id, expedita at autem vitae consequatur eius, iste quis ad illo? Adipisci, dolorem.</p>
         <div className="box">
           <span></span>
           <span></span>
           <span></span>
-        </div>
 
+        </div>
+        <h1>Our mission</h1>
+        <p>We are on a mission to lead, to enhance and to provide best-value products and services to global customers.To make a difference through our branding to stay ahead of fashion trends, market changes and the latest technology.</p>
       </section>
+
 
       <section className="promise">
+        <div className="box1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <h1>Our promise</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum corporis iste nihil fuga magni error consectetur sapiente provident, unde veritatis minima nisi natus nobis facere ratione quisquam, ipsam culpa. Reiciendis consequuntur dolorum iusto fuga atque porro perferendis quod, temporibus officiis? Hic similique fugit reprehenderit, libero suscipit sapiente magnam accusamus incidunt?</p>
+        <p>We promise to inspire generations with the quality of our brand. And to cultivate more fashion choices that are good for people, the planet and your wallet.</p>
+
 
       </section>
-      <div className="box">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+
       <section className="essence">
+
         <h1>Our essence</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat iusto autem excepturi impedit placeat eveniet. Sit quidem, recusandae ad quae qui aliquid ullam porro iusto alias ipsum eius dolore aspernatur neque rem laborum iste accusamus deserunt illo nisi sunt modi! Impedit dicta commodi voluptates, voluptas sint expedita vero nam! Praesentium.</p>
+
+        <p>Our print is our essence</p>
+
 
       </section>
-      <div className="box">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+
+      <a className="arrow" href="#">
+        <i class="fas fa-angle-up" ></i>
+      </a>
+
     </div>
   )
 }
