@@ -36,7 +36,6 @@ body{
     border: 1px solid $white;
     height: 65px;
     width: 65px;
-    //border: none;
      position: absolute;
      cursor: pointer;
      top: 90%;
@@ -53,16 +52,17 @@ body{
       position: relative;
     .box1 {
       color: $white;
-    background-color: transparent;
-    border-radius: 50%;
-    border: 1px solid $white;
-    height: 65px;
-    width: 65px;
+      background-color: transparent;
+      border-radius: 50%;
+      border: 1px solid $white;
+      height: 65px;
+      width: 65px;
       outline: none;
       cursor: pointer;
       position: absolute;
-      top: 85%;
-      left: 45%;
+      transform: translate(-50%,-50%);
+      top: 90%;
+      left: 50%;
       &:hover{
         background-color: $white;
         color: #242021;
