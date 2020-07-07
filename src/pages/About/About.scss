@@ -1,6 +1,7 @@
 @import '../../styles/colors.scss';
 body{
   overflow-x:hidden ;
+  scroll-behavior: smooth;
 }
 
 .about {
@@ -11,64 +12,62 @@ body{
   align-items: center;
  // background-color: $Black;
   color:$white;
+  & section:nth-child(1) {
+    background-color: #2cbcb2;
+  }
+  & section:nth-child(2) {
+    background-color: #242021;
+  }
+  & section:nth-child(3) {
+    background-color: #d44e28;
+  }
+
   
   
   
 
   .mission{
   position: relative;
-  
-  
-
-  .box {
+   .box  {
+    outline: none;
+    color: $white;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid $white;
+    height: 65px;
+    width: 65px;
+    //border: none;
      position: absolute;
+     cursor: pointer;
      top: 90%;
      left: 50%;
     transform: translate(-50%,-50%);
-     span {
-       display: block;
-       width: 20px;
-       height: 20px;
-       border-bottom: 1px solid white;
-       border-right: 1px solid white;
-       transform: rotate(45deg);
-       margin:-10px ;
-       animation: animate 2s infinite;
-       
-     }
-     & span:nth-child(1){
-       animation-delay: -0.2s;
-       
-     } 
-     & span:nth-child(2){
-      animation-delay: -0.4s;
+    &:hover{
+      background-color: $white;
+      color: #2cbcb2;
+      
     }
-     }
+ }
     }
     .promise{
       position: relative;
     .box1 {
+      color: $white;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid $white;
+    height: 65px;
+    width: 65px;
+      outline: none;
+      cursor: pointer;
       position: absolute;
-      top: 90%;
-      left: 50%;
-      span {
-        display: block;
-        width: 20px;
-        height: 20px;
-        border-bottom: 1px solid white;
-        border-right: 1px solid white;
-        transform: rotate(45deg);
-        margin:-10px ;
-        animation: animate 2s infinite;
+      top: 85%;
+      left: 45%;
+      &:hover{
+        background-color: $white;
+        color: #242021;
         
       }
-      & span:nth-child(1){
-        animation-delay: -0.2s;
-        
-      } 
-      & span:nth-child(2){
-       animation-delay: -0.4s;
-     }
     }
   }
 
@@ -85,6 +84,7 @@ body{
     background-color: black;
     h1 {
       text-align: center;
+      text-transform: uppercase;
     }
     p{
       
@@ -92,29 +92,34 @@ body{
     }
   }
   p{
-    line-height: 2em;
+    line-height: 3em;
+    padding: 0 200px;
+    letter-spacing: 1px;
+    font-size: 20px;
+   
   }
   div {
     cursor: pointer;
   }
  
   .arrow {
-    
-   
-    position: absolute;
+    border: none;
+    outline: none;
+   position: absolute;
     bottom: 4%;
     right: 4%;
-    .fas.fa-angle-up {
-      background-color: black;
-      color: $light-grey;
-      padding: 3px;
-      height: 30px;
-      width: 30px;
+    .fas.fa-angle-double-up {
+      background-color: #d44e28;
+      color: $white;
+      padding:8px;
+      height: 50px;
+      width: 50px;
       // border: 1px solid $light-grey;
       
     }
-    .fas.fa-angle-up:hover{
-      border: 1px solid $light-grey;
+    .fas.fa-angle-double-up:hover{
+      border: 1px solid $white;
+      cursor: pointer;
     }
   }
 
@@ -135,3 +140,12 @@ body{
     transform: rotate(45deg) translate(20px,20px);
   }
 }
+
+@media (max-width: 700px){
+  .about p{
+    line-height: 2em;
+    padding: 0 70px;
+  }
+}
+
+
