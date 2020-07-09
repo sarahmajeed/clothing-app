@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './Slideshow.scss';
+
 import {slide1} from '../images/1A.jpg'
 import {slide2} from '../images/2A.jpg'
 import {slide3} from '../images/3A.jpg'
