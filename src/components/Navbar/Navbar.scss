@@ -1,0 +1,234 @@
+$background: #f5f5f5;
+$textcolor: rgb(211, 204, 204);
+$hovercolor: rgb(234, 199, 26);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background;
+}
+
+/*DESKTOP VIEW*/
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: black;
+  font-family: "Montserrat", sans-serif;
+}
+
+.logo {
+  color: $textcolor;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 20px;
+  display: flex;
+  cursor: pointer;
+  span {
+    display: inline-flex;
+
+    &:nth-child(even) {
+      overflow: hidden;
+      transition: ease-out 0.5s;
+      color: $hovercolor;
+      letter-spacing: -1em;
+    }
+  }
+  &:hover span:nth-child(even) {
+    letter-spacing: 0;
+    transition-delay: 0.2s;
+  }
+  &:hover .e {
+    transition-delay: 0.5s;
+    transform: scale(-1, 1);
+  }
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  li {
+    list-style: none;
+  }
+  a {
+    color: $textcolor;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+}
+
+.navitem:hover {
+  color: $hovercolor;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  padding-top: 26px;
+  text-decoration: none;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: $textcolor;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background: white;
+  color: black;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover {
+  color: $hovercolor;
+  text-decoration: underline;
+  text-underline-position: under;
+  .dropdown-content {
+    display: block;
+    text-decoration: none;
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 10%;
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  i {
+    color: $textcolor;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+i:hover {
+  background: black;
+  color: white;
+}
+
+.bar {
+  display: none;
+  cursor: pointer;
+}
+.bar div {
+  width: 25px;
+  height: 3px;
+  background-color: $hovercolor;
+  margin: 5px;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: white;
+  }
+}
+
+/*MOBILE VIEW*/
+
+@media screen and (max-width: 249px) {
+  body {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 250px) {
+  body {
+    overflow-x: hidden;
+  }
+  nav {
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .nav-links {
+    position: absolute;
+    left: 0px;
+    height: 90vh;
+    top: 10vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    width: 100vh;
+    padding-left: 50px;
+    transform: translateX(-100%);
+    transition: transform 0.75s ease-out;
+    a:active {
+      text-decoration: none;
+    }
+  }
+
+  .dropdown-content {
+    position: static;
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    width: 10%;
+    padding-right: 100px;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+  .bar {
+    margin-right: 70px;
+    display: block;
+  }
+  i {
+    margin-right: 10px;
+  }
+}
+.navactive {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.cross .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.cross .line2 {
+  opacity: 0;
+}
+.cross .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
