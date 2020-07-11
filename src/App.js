@@ -5,7 +5,7 @@ import HomePage from './pages/HomePage/HomePage';
 import AnimatedImages from './components/AnimatedImages/AnimatedImages';
 
 import Navbar from './components/Navbar/Navbar';
-import Slideshow from './components/SildeShow/Slideshow';
+import Slideshow from './components/Slideshow/Slideshow';
 
 
 
