@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./Slideshow.scss";
 
-import slide1 from "../../images/1A.jpg";
+import slide1 from "../../images/sarah.jpg";
 import slide2 from "../../images/dummy.jpg";
-import slide3 from "../../images/3A.jpg";
-import slide4 from "../../images/download.jpg";
+import slide3 from "../../images/sarah.jpg";
+import slide4 from "../../images/dummy.jpg";
 
 class Slideshow extends Component {
   //Displays slides
