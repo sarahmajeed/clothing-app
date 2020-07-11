@@ -3,7 +3,8 @@ import './App.css';
 import { Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar/Navbar';
-import Slideshow from './components/Slideshow/Slideshow';
+import Slideshow from './components/SildeShow/Slideshow';
+
 
 function App() {
   return (
