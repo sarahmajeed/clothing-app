@@ -4,12 +4,20 @@ import { Route } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
 import AnimatedImages from './components/AnimatedImages/AnimatedImages';
 
+import Navbar from './components/Navbar/Navbar';
+import Slideshow from './components/SildeShow/Slideshow';
+
+
+
 function App() {
   return (
     <div className="App">
+      <Navbar />
       {/* importing homepage route */}
       <Route exact path="/" render={() => <HomePage />} />
       <AnimatedImages />
+      <Slideshow />
+
     </div>
   );
 }
