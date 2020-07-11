@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Navbar />
       {/* importing homepage route */}
-      <Route exact path="/" render={() => <HomePage />} />
+
     </div>
   );
 }
