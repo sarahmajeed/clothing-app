@@ -16,11 +16,14 @@ body {
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   min-height: 10vh;
   background-color: black;
+  padding: 0 40px;
   font-family: "Montserrat", sans-serif;
+  
+
 }
 
 .logo {
@@ -104,7 +107,7 @@ nav {
 /* Show the dropdown menu on hover */
 .dropdown:hover {
   color: $hovercolor;
-  text-decoration: underline;
+  text-decoration: none;
   text-underline-position: under;
   .dropdown-content {
     display: block;
@@ -177,7 +180,7 @@ i:hover {
     display: flex;
     flex-direction: column;
     width: 100vh;
-    padding-left: 50px;
+    padding-left: 0px;
     transform: translateX(-100%);
     transition: transform 0.75s ease-out;
     a:active {

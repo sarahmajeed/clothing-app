@@ -94,7 +94,7 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="/signin">
             <i className="fa fa-user-circle"></i>
           </a>
         </li>

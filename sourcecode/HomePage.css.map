@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../src/pages/HomePage/HomePage.scss"
-    ],
-    "names": [],
-    "file": "HomePage.css"
-}
