@@ -15,8 +15,9 @@ function App() {
       <Navbar />
       {/* importing homepage route */}
       <Route exact path="/" render={() => <HomePage />} />
-      <AnimatedImages />
       <Slideshow />
+      <AnimatedImages />
+
 
     </div>
   );
