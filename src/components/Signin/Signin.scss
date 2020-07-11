@@ -1,0 +1,23 @@
+@import '../../styles/colors.scss';
+.form{
+.btn {
+      
+  text-transform: uppercase;
+  background-color: $light-black;
+  color: $white;
+  margin-top: 10px;
+  margin-left: 12px;
+  width:200px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  
+}
+.btn:hover {
+  color: $Black;
+  border: 1px solid $Black;
+  background-color: $white;
+}
+}
+
+

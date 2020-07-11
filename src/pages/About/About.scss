@@ -1,0 +1,151 @@
+@import '../../styles/colors.scss';
+body{
+  overflow-x:hidden ;
+  scroll-behavior: smooth;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+  align-items: center;
+ // background-color: $Black;
+  color:$white;
+  & section:nth-child(1) {
+    background-color: #2cbcb2;
+  }
+  & section:nth-child(2) {
+    background-color: #242021;
+  }
+  & section:nth-child(3) {
+    background-color: #d44e28;
+  }
+
+  
+  
+  
+
+  .mission{
+  position: relative;
+   .box  {
+    outline: none;
+    color: $white;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid $white;
+    height: 65px;
+    width: 65px;
+     position: absolute;
+     cursor: pointer;
+     top: 90%;
+     left: 50%;
+    transform: translate(-50%,-50%);
+    &:hover{
+      background-color: $white;
+      color: #2cbcb2;
+      
+    }
+ }
+    }
+    .promise{
+      position: relative;
+    .box1 {
+      color: $white;
+      background-color: transparent;
+      border-radius: 50%;
+      border: 1px solid $white;
+      height: 65px;
+      width: 65px;
+      outline: none;
+      cursor: pointer;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      top: 90%;
+      left: 50%;
+      &:hover{
+        background-color: $white;
+        color: #242021;
+        
+      }
+    }
+  }
+
+  
+
+  .mission, .promise, .essence {
+  
+    
+   
+    padding: 30px;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: center;
+    background-color: black;
+    h1 {
+      text-align: center;
+      text-transform: uppercase;
+    }
+    p{
+      
+       margin: 30vh 0;
+    }
+  }
+  p{
+    line-height: 3em;
+    padding: 0 200px;
+    letter-spacing: 1px;
+    font-size: 20px;
+   
+  }
+  div {
+    cursor: pointer;
+  }
+ 
+  .arrow {
+    border: none;
+    outline: none;
+   position: absolute;
+    bottom: 4%;
+    right: 4%;
+    .fas.fa-angle-double-up {
+      background-color: #d44e28;
+      color: $white;
+      padding:8px;
+      height: 50px;
+      width: 50px;
+      // border: 1px solid $light-grey;
+      
+    }
+    .fas.fa-angle-double-up:hover{
+      border: 1px solid $white;
+      cursor: pointer;
+    }
+  }
+
+ 
+  
+}   
+
+@keyframes animate {
+  0%{
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px,-20px);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: rotate(45deg) translate(20px,20px);
+  }
+}
+
+@media (max-width: 700px){
+  .about p{
+    line-height: 2em;
+    padding: 0 70px;
+  }
+}
+
+

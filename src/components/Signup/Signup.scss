@@ -1,0 +1,125 @@
+@import '../../styles/colors.scss';
+
+.main {
+  color: $Black;
+  border: 1px solid transparent;
+  min-height: calc(100vh - 60px);
+  
+  .form {
+    margin:60px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p{
+      font-size: 20px;
+      letter-spacing: 1px;
+      font-weight: 400;
+      
+    }
+
+    .span {
+      display: inline-block;
+      height: 1px;
+      width: 350px;
+      margin-top: 2px;
+      margin-bottom: 30px;
+      background-color: $Black;
+    }  
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+     
+  
+      input[type='password'],
+      input[type='email'],
+      input[type='text'] {
+        margin: 10px;
+        width: 100px;
+        
+      }
+      ::placeholder{
+        color: pink;
+      }
+      input[type='password']{
+        
+        letter-spacing: 3px;
+      }
+    }
+    
+    .input-grp {
+      position: relative;
+      
+      .input {
+        margin: 20px;
+        padding: 5px;
+        width: 300px;
+      }
+      .icon {
+        color: $Black;
+      }
+
+      .label {
+        
+       width: 100px;
+       text-align: left;
+        margin-bottom: 50px;
+        position: absolute;
+        top: 0px;
+        left: 18px;
+     }
+    }
+    .buttons{
+     
+     width: 300px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+      display: flex;
+      flex-direction: row;
+      margin-top: 20px;
+      .fas.fa-arrow-left{
+        color: $Black;
+        margin-right: 5px;
+      }
+  
+    
+    .btn {
+      
+      text-transform: uppercase;
+      background-color:  $light-black;
+      color:$white;
+      margin-top: 10px;
+      margin-left: 12px;
+      width:100px;
+      height: 40px;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: $white;
+      color: $Black;
+      border: 1px solid $Black;
+    }
+
+  
+  }
+    .new-customers {
+      margin-top: 70px;
+      .para0{
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+      }
+      .para {
+        width: 350px;
+        font-size: 80%;
+      }
+      
+    }
+  }
+}
+
+form + p {
+  margin-top: 100px;
+}

@@ -1,5 +1,17 @@
+@import './styles/colors';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
 .App {
+  
   text-align: center;
+  position: relative;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -36,3 +48,18 @@
     transform: rotate(360deg);
   }
 }
+
+.footer {
+  width: 100vw;
+  position: absolute;
+  background-color: #1B1D1E;
+  color: $dark-grey;
+  padding: 15px;
+  bottom: 0;
+  .copyright  {
+    
+    color: $grey;
+  }
+}
+
+
