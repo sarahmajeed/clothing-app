@@ -17,8 +17,8 @@ export default () =>
 {
   return(
     <Swiper
-      spaceBetween = {50}
-      slidesPerView = {3}
+      spaceBetween = {0}
+      slidesPerView = {1}
       navigation
       onSwiper = {(swiper) => console.log(swiper)}
       onSlideChange = {() => console.log('slide change')}
