@@ -8,6 +8,7 @@ body{
   display: flex;
   flex-direction: column;
   position: relative;
+ 
   
   align-items: center;
  // background-color: $Black;
@@ -23,11 +24,10 @@ body{
   }
 
   
-  
-  
-
   .mission{
-  position: relative;
+    position: relative;
+    height: calc(100vh - 10vh);
+    
    .box  {
     outline: none;
     color: $white;
@@ -49,6 +49,7 @@ body{
  }
     }
     .promise{
+      height: 100vh;
       position: relative;
     .box1 {
       color: $white;
@@ -71,6 +72,10 @@ body{
     }
   }
 
+  .essence{
+    height: 100vh;
+  }
+
   
 
   .mission, .promise, .essence {
@@ -78,7 +83,7 @@ body{
     
    
     padding: 30px;
-    height: 100vh;
+    
     width: 100vw;
     scroll-snap-align: center;
     background-color: black;

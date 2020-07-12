@@ -8,10 +8,10 @@ import Signin from './components/Signin/Signin';
 
 import About from './pages/About/About';
 
-import AnimatedImages from './components/AnimatedImages/AnimatedImages';
+
 
 import Navbar from './components/Navbar/Navbar';
-import Slideshow from './components/Slideshow/Slideshow';
+
 
 
 
@@ -27,13 +27,13 @@ function App() {
       <Route exact path="/signin" render={() => <Signin />} />
       <Route exact path="/about" render={() => <About />} />
 
+
       {/* Footer */}
       <footer className="footer">
         <p className="copyright">Copyright &copy; | Brand | Clothing App</p>
       </footer>
 
-      <Slideshow />
-      <AnimatedImages />
+
 
 
 

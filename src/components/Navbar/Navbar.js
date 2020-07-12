@@ -71,12 +71,12 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a className="navitem" href="#">
+          <a className="navitem" href="/about">
             ABOUT US
           </a>
         </li>
         <li>
-          <a classNames="navitem" href="#">
+          <a classNames="navitem" href="/contact">
             CONTACT US
           </a>
         </li>
