@@ -7,6 +7,7 @@ $navcolor: black;
   text-decoration: none;
 }
 
+
 @mixin alignment {
   display: flex;
   justify-content: space-evenly;
@@ -19,13 +20,14 @@ $navcolor: black;
   text-underline-position: below;*/
 }
 
-body {
-  background-color: $background;
-}
+// body {
+//   background-color: $background;
+// }
 
 /*DESKTOP VIEW*/
 
 nav {
+  
   @include alignment();
   min-height: 8vh;
   background-color: $navcolor;
@@ -84,11 +86,16 @@ nav {
   background-color: $navcolor;
   min-width: 100px;
   padding-top: 14px;
+  
 
   a {
     color: $textcolor;
     padding: 10px 10px;
     display: block;
+    position: relative;
+    z-index: 20;
+    background: black;
+      color: white;
 
     &:hover {
       //Styling of dropdown content on hover
