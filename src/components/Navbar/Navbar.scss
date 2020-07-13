@@ -8,7 +8,6 @@ $navcolor: black;
   font-family: "Montserrat", sans-serif;
 }
 
-
 @mixin alignment {
   display: flex;
   justify-content: space-evenly;
@@ -28,7 +27,6 @@ $navcolor: black;
 /*DESKTOP VIEW*/
 
 nav {
-  
   @include alignment();
   min-height: 10vh;
   background-color: $navcolor;
@@ -87,7 +85,6 @@ nav {
   min-width: 100px;
   padding-top: 14px;
 
-
   a {
     color: $textcolor;
     padding: 10px 10px;
@@ -95,7 +92,7 @@ nav {
     position: relative;
     z-index: 20;
     background: black;
-      color: white;
+    color: white;
 
     &:hover {
       //Styling of dropdown content on hover
@@ -186,6 +183,7 @@ nav {
     padding-left: 0px;
     transform: translateX(-100%);
     transition: transform 0.75s ease-out;
+    z-index: 20;
   }
 
   .dropdown-content {
