@@ -29,14 +29,16 @@ nav {
     font-size: 15px;
     display: flex;
     cursor: pointer;
-    h4 {
+    a {
       display: inline-flex;
       span {
         display: inline-flex;
 
         &:nth-child(even) {
+          display: inline-flex;
+          margin-left: 3px;
           overflow: hidden;
-          transition: ease-out 0.5s;
+          transition: ease-out 0.75s;
           color: $hovercolor;
           letter-spacing: -1em;
         }
@@ -45,7 +47,7 @@ nav {
 
     &:hover span:nth-child(even) {
       letter-spacing: 0;
-      transition-delay: 0.2s;
+      transition-delay: 0.5s;
     }
     &:hover .e {
       transition-delay: 0.5s;
@@ -63,7 +65,7 @@ nav {
   a {
     color: $textcolor;
     letter-spacing: 3px;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 12px;
     &:hover {
       color: $hovercolor;
