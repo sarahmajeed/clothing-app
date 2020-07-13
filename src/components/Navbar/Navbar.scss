@@ -5,6 +5,7 @@ $navcolor: black;
 
 * {
   text-decoration: none;
+  font-family: "Montserrat", sans-serif;
 }
 
 
@@ -29,16 +30,15 @@ $navcolor: black;
 nav {
   
   @include alignment();
-  min-height: 8vh;
+  min-height: 10vh;
   background-color: $navcolor;
   padding: 0 40px;
-  font-family: "Montserrat", sans-serif;
 
   .logo {
     color: $textcolor;
     text-transform: uppercase;
     letter-spacing: 3px;
-    font-size: 20px;
+    font-size: 15px;
     display: flex;
     cursor: pointer;
     span {
@@ -71,8 +71,8 @@ nav {
   a {
     color: $textcolor;
     letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 14px;
+    font-weight: normal;
+    font-size: 12px;
     &:hover {
       @include onHover();
     }
@@ -86,7 +86,7 @@ nav {
   background-color: $navcolor;
   min-width: 100px;
   padding-top: 14px;
-  
+
 
   a {
     color: $textcolor;
