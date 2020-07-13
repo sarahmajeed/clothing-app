@@ -29,16 +29,20 @@ nav {
     font-size: 15px;
     display: flex;
     cursor: pointer;
-    span {
+    h4 {
       display: inline-flex;
+      span {
+        display: inline-flex;
 
-      &:nth-child(even) {
-        overflow: hidden;
-        transition: ease-out 0.5s;
-        color: $hovercolor;
-        letter-spacing: -1em;
+        &:nth-child(even) {
+          overflow: hidden;
+          transition: ease-out 0.5s;
+          color: $hovercolor;
+          letter-spacing: -1em;
+        }
       }
     }
+
     &:hover span:nth-child(even) {
       letter-spacing: 0;
       transition-delay: 0.2s;
