@@ -31,25 +31,24 @@ const Navbar = () => {
       </div>
       <div className="logo">
         <h4>
-          <span className="e">Ǝ</span>
-          <span>-COMPANY</span>
+          <a href="/">
+            <span className="e">Ǝ</span>
+            <span>-COMPANY</span>
+          </a>
         </h4>
       </div>
 
       <ul className="nav-links">
-        <div className="dropdown">
-          <li>
-            <a className="navitem droptag" href="#">
-              WOMEN
-            </a>
-            <i className="fa fa-caret-down"></i>
-          </li>
-
+        <li className="dropdown">
+          <a className="navitem droptag" href="#">
+            WOMEN
+          </a>
+          <i className="fa fa-caret-down"></i>
           <div className="dropdown-content">
             <a href="#">Kurtis</a>
             <a href="#">Trousers</a>
           </div>
-        </div>
+        </li>
 
         <div className="dropdown">
           <li>
@@ -57,12 +56,12 @@ const Navbar = () => {
               MEN
             </a>
             <i className="fa fa-caret-down"></i>
+            <div className="dropdown-content">
+              <a href="#">Kurta</a>
+              <a href="#">Shirts</a>
+              <a href="#">Pants</a>
+            </div>
           </li>
-          <div className="dropdown-content">
-            <a href="#">Kurta</a>
-            <a href="#">Shirts</a>
-            <a href="#">Pants</a>
-          </div>
         </div>
 
         <li>
