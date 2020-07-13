@@ -17,12 +17,12 @@ export default () => {
   return (
     <Swiper
       spaceBetween={0}
-      loop={true}
+      loop={true} //slideshow loop
       slidesPerView={1}
       navigation
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
-      pagination
+      pagination //for slide show buttons in bottom
     >
       <SwiperSlide>
         <img src={slide1} alt="error1" />
