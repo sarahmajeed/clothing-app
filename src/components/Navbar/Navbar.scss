@@ -26,13 +26,14 @@ nav {
     color: $textcolor;
     text-transform: uppercase;
     letter-spacing: 3px;
-    font-size: 15px;
+    font-size: 20px;
     display: flex;
     cursor: pointer;
     a {
       display: inline-flex;
       span {
         display: inline-flex;
+        color: $hovercolor;
 
         &:nth-child(even) {
           display: inline-flex;
@@ -79,14 +80,15 @@ nav {
   position: absolute;
   background-color: $navcolor;
   min-width: 100px;
-  padding-top: 14px;
-
+  padding-top: 19px;
+  text-align: center;
+  margin: auto;
   a {
     color: $textcolor;
     padding: 10px 10px;
     display: block;
     position: relative;
-    z-index: 20;
+    z-index: 18;
     background: black;
     color: white;
 
@@ -107,7 +109,9 @@ nav {
     .dropdown-content {
       display: block;
       text-decoration: none;
-      height: 20vh;
+      position: absolute;
+      left: -50%;
+      right: -50%;
     }
   }
 }
@@ -168,14 +172,15 @@ nav {
 
   .nav-links {
     position: absolute;
-    left: 0px;
+    left: -50%;
+    text-align: left;
+    justify-items: left;
     height: 90vh;
     top: 10vh;
     background-color: black;
     display: flex;
     flex-direction: column;
     width: 100vh;
-    padding-left: 0px;
     transform: translateX(-100%);
     transition: transform 0.75s ease-out;
     z-index: 20;
