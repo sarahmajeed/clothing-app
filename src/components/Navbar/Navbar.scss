@@ -14,16 +14,6 @@ $navcolor: black;
   align-items: center;
 }
 
-@mixin onHover {
-  color: $hovercolor;
-  /*text-decoration: underline;
-  text-underline-position: below;*/
-}
-
-// body {
-//   background-color: $background;
-// }
-
 /*DESKTOP VIEW*/
 
 nav {
@@ -72,7 +62,7 @@ nav {
     font-weight: normal;
     font-size: 12px;
     &:hover {
-      @include onHover();
+      color: $hovercolor;
     }
   }
 }
@@ -108,11 +98,10 @@ nav {
   display: inline-block;
   &:hover {
     color: $hovercolor;
-    text-decoration: underline;
-    text-underline-position: under;
     .dropdown-content {
       display: block;
       text-decoration: none;
+      height: 20vh;
     }
   }
 }
