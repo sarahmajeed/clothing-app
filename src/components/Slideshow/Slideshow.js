@@ -1,10 +1,10 @@
 import React from "react";
 import "./Slideshow.scss";
 
-import slide1 from "../../images/1.jpg";
-import slide2 from "../../images/pic1.png";
-import slide3 from "../../images/sarah.jpg";
-import slide4 from "../../images/pic1.png";
+import slide1 from "../../images/1A.jpg";
+import slide2 from "../../images/2A.jpg";
+import slide3 from "../../images/3A.jpg";
+import slide4 from "../../images/9.PNG";
 
 import SwiperCore, { Navigation } from 'swiper';
 import { Swiper , SwiperSlide } from 'swiper/react';
