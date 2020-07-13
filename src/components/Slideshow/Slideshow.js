@@ -1,10 +1,10 @@
 import React from "react";
 import "./Slideshow.scss";
 
-import slide1 from "../../images/sarah.jpg";
-import slide2 from "../../images/pic1.png";
-import slide3 from "../../images/sarah.jpg";
-import slide4 from "../../images/pic1.png";
+import slide1 from "../../images/1A.jpg";
+import slide2 from "../../images/2A.jpg";
+import slide3 from "../../images/3A.jpg";
+import slide4 from "../../images/9.PNG";
 
 import SwiperCore, { Navigation } from 'swiper';
 import { Swiper , SwiperSlide } from 'swiper/react';
@@ -17,8 +17,8 @@ export default () =>
 {
   return(
     <Swiper
-      spaceBetween = {50}
-      slidesPerView = {3}
+      spaceBetween = {0}
+      slidesPerView = {1}
       navigation 
       onSwiper = {(swiper) => console.log(swiper)}
       onSlideChange = {() => console.log('slide change')}
