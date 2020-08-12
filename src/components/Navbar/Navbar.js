@@ -45,8 +45,8 @@ const Navbar = () => {
           </a>
           <i className="fa fa-caret-down"></i>
           <div className="dropdown-content">
-            <a href="#">Kurtis</a>
-            <a href="#">Trousers</a>
+            <a href="/women/kurtis">Kurtis</a>
+            <a href="/women/trousers">Trousers</a>
           </div>
         </li>
 
@@ -57,15 +57,15 @@ const Navbar = () => {
             </a>
             <i className="fa fa-caret-down"></i>
             <div className="dropdown-content">
-              <a href="#">Kurta</a>
-              <a href="#">Shirts</a>
-              <a href="#">Pants</a>
+              <a href="/men/kurta">Kurta</a>
+              <a href="/men/shirts">Shirts</a>
+              <a href="/men/pants">Pants</a>
             </div>
           </li>
         </div>
 
         <li>
-          <a className="navitem" href="#">
+          <a className="navitem" href="/accessories">
             ACCESSORIES
           </a>
         </li>
