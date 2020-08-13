@@ -1,0 +1,45 @@
+.PictureDiscription {
+  justify-content: center;
+
+  display: flex;
+  margin: 0px 50px;
+  align-items: center;
+  min-height: 80vh;
+  gap: 50px;
+  .picture {
+    width: 450px;
+    height: 520px;
+    background: rgb(147, 146, 168);
+    background: linear-gradient(
+      90deg,
+      rgba(147, 146, 168, 1) 0%,
+      rgba(149, 230, 202, 1) 42%,
+      rgba(16, 55, 62, 1) 92%
+    );
+
+    border: solid 2px black;
+    box-shadow: 1px 1px 50px 1px black;
+    .image {
+      margin-top: 20px;
+      justify-content: center;
+      width: 400px;
+      height: 470px;
+      border: solid 2px black;
+    }
+  }
+  .discription {
+    display: flex;
+
+    .namePrice {
+      display: flex;
+      gap: 50px;
+      justify-content: space-evenly;
+      .ItemName {
+        font-family: "Montserrat", sans-serif;
+      }
+      .ItemPrice {
+        justify-content: right;
+      }
+    }
+  }
+}

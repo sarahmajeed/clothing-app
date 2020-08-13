@@ -1,20 +1,15 @@
-import React from 'react';
-import './App.scss';
-import { Route } from 'react-router-dom';
-import HomePage from './pages/HomePage/HomePage';
+import React from "react";
+import "./App.scss";
+import { Route } from "react-router-dom";
+import HomePage from "./pages/HomePage/HomePage";
 
-import Signup from './components/Signup/Signup';
-import Signin from './components/Signin/Signin';
+import Signup from "./components/Signup/Signup";
+import Signin from "./components/Signin/Signin";
 
-import About from './pages/About/About';
+import About from "./pages/About/About";
+import PictureDiscription from "./pages/PictureDiscription/PictureDiscription";
 
-
-
-import Navbar from './components/Navbar/Navbar';
-
-
-
-
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
@@ -26,17 +21,16 @@ function App() {
       <Route exact path="/signup" render={() => <Signup />} />
       <Route exact path="/signin" render={() => <Signin />} />
       <Route exact path="/about" render={() => <About />} />
-
+      <Route
+        exact
+        path="/PictureDiscription"
+        render={() => <PictureDiscription />}
+      />
 
       {/* Footer */}
       <footer className="footer">
         <p className="copyright">Copyright &copy; | Brand | Clothing App</p>
       </footer>
-
-
-
-
-
     </div>
   );
 }

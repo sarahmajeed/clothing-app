@@ -65,7 +65,7 @@ const Navbar = () => {
         </div>
 
         <li>
-          <a className="navitem" href="#">
+          <a className="navitem" href="/PictureDiscription">
             ACCESSORIES
           </a>
         </li>
