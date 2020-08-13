@@ -65,11 +65,7 @@ const Navbar = () => {
         </div>
 
         <li>
-<<<<<<< HEAD
-          <a className="navitem" href="/PictureDiscription">
-=======
           <a className="navitem" href="/accessories">
->>>>>>> 256828f5615e86eb2c4092407ec06a6527e712b3
             ACCESSORIES
           </a>
         </li>
