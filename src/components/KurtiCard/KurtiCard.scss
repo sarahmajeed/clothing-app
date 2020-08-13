@@ -1,0 +1,33 @@
+.kurticard{
+display: grid;
+grid-template-columns: auto auto auto;
+
+.card {
+  height: 100vh;
+}
+
+.img{
+  margin-top: 70px;
+  height: 400px;
+  width: 300px;
+  &:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    
+    animation: zoomIn ease 2s;
+  }
+}
+.tag{
+  margin-top: 15px;
+  font-size: large;
+}
+}
+
+@media screen and (max-width: 800px){
+  .kurticard{
+    display: grid;
+    grid-template-columns: auto auto;
+    
+  }
+}
+
