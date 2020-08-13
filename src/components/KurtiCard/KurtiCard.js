@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./KurtiCard.scss";
-import PictureDiscription from "../../pages/PictureDiscription/PictureDiscription";
+import PictureDiscription from "../PictureDiscription/PictureDiscription";
 
 function KurtiCard({ kurtis, search }) {
   const [discriptionVisible, setDescriptionVisible] = useState(false);
@@ -15,9 +15,6 @@ function KurtiCard({ kurtis, search }) {
         {filteredKurtis.map((kurti) => {
           return (
             <div className="card" onClick={() => setDescriptionVisible(true)}>
-              <img className="img" src={kurti.kurtiimg} alt="error" />
-              <div className="tag">{kurti.tag}</div>
-              <div className="price">Price: Rs. {kurti.kurtiprice}</div>
               <PictureDiscription
                 data={{
                   title: kurti.tag,
@@ -27,6 +24,9 @@ function KurtiCard({ kurtis, search }) {
                 visible={discriptionVisible}
                 setVisible={setDescriptionVisible}
               />
+              <img className="img" src={kurti.kurtiimg} alt="error" />
+              <div className="tag">{kurti.tag}</div>
+              <div className="price">Price: Rs. {kurti.kurtiprice}</div>
             </div>
           );
         })}

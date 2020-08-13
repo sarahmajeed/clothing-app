@@ -1,14 +1,3 @@
-// /* Using the ITCSS (http://itcss.io/) architecture for CSS */
-
-/* 1. Settings - Preprocessors variables, fonts, imports, etc. */
-
-@import url(https://fonts.googleapis.com/css?family=Poppins);
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-
-/* 2. Tools - mixins */
-
-/* 3. Generic - very generic CSS rules */
-
 * {
   box-sizing: border-box;
   font-family: Montserrat;
@@ -49,19 +38,6 @@ input:focus {
 
 input[type="submit"],
 input[type="button"] {
-}
-
-/* 5. Objects - wrappers, cards, etc. */
-
-.random-background {
-  background-color: #36a88e;
-  /*top colour*/
-  background-image: -webkit-linear-gradient(top, #36a88e, #f35b47);
-  background-image: -moz-linear-gradient(top, #36a88e, #f35b47);
-  background-image: -o-linear-gradient(top, #36a88e, #f35b47);
-  background-image: linear-gradient(to bottom, #36a88e, #f35b47);
-  height: 200vh;
-  width: 100vw;
 }
 
 .itemlist {

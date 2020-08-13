@@ -1,13 +1,7 @@
 import React from "react";
-import { useState } from "react";
 import "./PictureDiscription.scss";
 
-import dummy1 from "../../images/1.jpg";
-import dummy2 from "../../images/1A.jpg";
-import dummy3 from "../../images/2A.jpg";
-import dummy4 from "../../images/3A.jpg";
-
-const PictureDiscription = ({data,visible,setVisible}) => {
+const PictureDiscription = ({ data, visible, setVisible }) => {
   const productData = data;
 
   const GoBack = () => {
@@ -27,7 +21,7 @@ const PictureDiscription = ({data,visible,setVisible}) => {
                 <div class="product-details">
                   <div class="product-left">
                     <div class="product-info">
-                      <div class="product-manufacturer">NOOK</div>
+                      <div class="product-manufacturer">ELEGANT</div>
                       <div class="product-title">{productData.title}</div>
                       <div class="product-price">
                         {productData.price}
