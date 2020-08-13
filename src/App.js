@@ -21,11 +21,6 @@ function App() {
       <Route exact path="/signup" render={() => <Signup />} />
       <Route exact path="/signin" render={() => <Signin />} />
       <Route exact path="/about" render={() => <About />} />
-      <Route
-        exact
-        path="/PictureDiscription"
-        render={() => <PictureDiscription />}
-      />
 
       {/* Footer */}
       <footer className="footer">
