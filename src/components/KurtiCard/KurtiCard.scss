@@ -13,7 +13,7 @@ grid-template-columns: auto auto auto;
   &:hover{
     cursor: pointer;
     opacity: 0.8;
-    width: 500px;
+    
     animation: zoomIn ease 2s;
   }
 }
@@ -27,11 +27,7 @@ grid-template-columns: auto auto auto;
   .kurticard{
     display: grid;
     grid-template-columns: auto auto;
-    .img{
-      &:hover{
-        width: 400px;
-      }
-    }
+    
   }
 }
 

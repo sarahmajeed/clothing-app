@@ -1,0 +1,26 @@
+@import '../../styles/colors.scss';
+.fas.fa-search{
+  color: grey;
+}
+.search-text{
+  width: 250px;
+  margin-top:20px ;
+  border: none;
+  border-bottom: 2px solid grey;
+  background-color: #EEEEEE;
+  color: $light-grey;
+  letter-spacing: 2px;
+  &:focus{
+    font-size: medium;
+    color: $dark-grey;
+    font-style: bold;
+  }
+  &, select {
+    outline: none;
+    padding: 10px;
+  }
+  
+  &::placeholder{
+    font-style: italic;
+  }
+}

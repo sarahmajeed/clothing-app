@@ -1,24 +1,11 @@
 import React from 'react'
-import { useEffect, useState } from 'react';
 import KurtiCard from '../../components/KurtiCard/KurtiCard'
 
-function KurtiList() {
-  const [kurtis, setKurtis] = useState([]);
+function KurtiList({ kurtis, setKurtis, search }) {
 
-  useEffect(() => {
-    fetch('http://localhost:5000/women/kurtis', {
-      method: 'get',
-      headers: { 'Content-Type': 'application/json' },
-    })
-      .then(res => res.json())
-      .then(res => {
-        console.log(res)
-        setKurtis(res)
-      })
-  }, [])
   return (
     <div>
-      <KurtiCard kurtis={kurtis} />
+      <KurtiCard kurtis={kurtis} search={search} />
     </div>
   )
 }

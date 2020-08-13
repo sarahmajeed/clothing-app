@@ -12,9 +12,13 @@ import MenKurta from './components/MenKurta/MenKurta'
 import Accessories from './components/Accessories/Accessories'
 import About from './pages/About/About';
 import Navbar from './components/Navbar/Navbar';
+import { useState } from 'react';
 
 function App() {
+
+
   return (
+
     <div className="App">
       <Navbar />
       {/* importing homepage route */}

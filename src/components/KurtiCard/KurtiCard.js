@@ -1,11 +1,16 @@
 import React from 'react'
 import './KurtiCard.scss'
 
-function KurtiCard({ kurtis }) {
+function KurtiCard({ kurtis, search }) {
+
+  const filteredKurtis = kurtis.filter(kurti => {
+    return kurti.tag.toLowerCase().includes(search.toLowerCase())
+  })
+
   return (
     <div className="kurticard">
       {
-        kurtis.map(kurti => {
+        filteredKurtis.map(kurti => {
           return (
             <div className="card">
               <img className="img" src={kurti.kurtiimg} alt="error" />
