@@ -10,7 +10,9 @@ function TrouserCard({ trousers, search }) {
         filteredTrousers.map(trouser => {
           return (
             <div className="card">
-              <img className="img" src={trouser.trouserimg} alt="error" />
+              <div className="container">
+                <img className="img" src={trouser.trouserimg} alt="error" />
+              </div>
               <div className="tag">{trouser.tag}</div>
               <div className="span"></div>
               <div className="price">Price: Rs. {trouser.trouserprice}</div>

@@ -1,4 +1,4 @@
-@import '../../styles/_colors.scss';
+@import '../../../styles/_colors.scss';
 
 .kurticard{
 display: grid;
@@ -29,7 +29,6 @@ grid-template-columns: auto auto auto;
 }
 .tag{
   margin-top: 15px;
-  
   color: $light-black;
 }
 .span{

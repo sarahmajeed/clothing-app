@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import KurtiList from '../../components/KurtiList/KurtiList';
-import './WomenKurtis.scss'
+import KurtiList from '../Lists/KurtiList/KurtiList';
+
 import SearchBox from '../SearchBox/SearchBox';
 
 function WomenKurtis() {
