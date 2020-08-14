@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import KurtaList from '../KurtaList/KurtaList'
+import KurtaList from '../Lists/KurtaList/KurtaList'
 import SearchBox from '../SearchBox/SearchBox'
 
 function MenKurta() {

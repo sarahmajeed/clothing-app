@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ShirtList from '../ShirtList/ShirtList';
+import ShirtList from '../Lists/ShirtList/ShirtList';
 import SearchBox from '../SearchBox/SearchBox';
 
 function MenShirts() {

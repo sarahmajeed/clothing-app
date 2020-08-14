@@ -1,5 +1,5 @@
 import React from 'react';
-import PantCard from '../PantCard/PantCard'
+import PantCard from '../../Cards/PantCard/PantCard'
 
 function PantList({ search, pants }) {
   return (

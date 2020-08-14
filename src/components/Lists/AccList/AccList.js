@@ -1,5 +1,5 @@
 import React from 'react';
-import AccCard from '../AccCard/AccCard'
+import AccCard from '../../Cards/AccCard/AccCard'
 
 function AccList({ search, acc }) {
   return (

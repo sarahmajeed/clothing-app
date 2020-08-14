@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import KurtaCard from '../KurtaCard/KurtaCard';
-import SearchBox from '../SearchBox/SearchBox';
+import KurtaCard from '../../Cards/KurtaCard/KurtaCard';
+import SearchBox from '../../SearchBox/SearchBox';
 
 function KurtaList({ search, kurtas, setKurtas }) {
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import ShirtCard from '../ShirtCard/ShirtCard'
+import ShirtCard from '../../Cards/ShirtCard/ShirtCard'
 
 function ShirtList({ search, shirts, setShirts }) {
   return (

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import AccList from '../AccList/AccList';
+import AccList from '../Lists/AccList/AccList';
 import SearchBox from '../SearchBox/SearchBox'
 
 function Accessories() {

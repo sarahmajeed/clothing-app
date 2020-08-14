@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import TrouserList from '../TrouserList/TrouserList'
+import TrouserList from '../Lists/TrouserList/TrouserList'
 import SearchBox from '../SearchBox/SearchBox'
 
 function WomenTrousers() {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import TrouserCard from '../TrouserCard/TrouserCard'
+import TrouserCard from '../../Cards/TrouserCard/TrouserCard'
 
 function TrouserList({ search, trousers }) {
   return (

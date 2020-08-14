@@ -1,12 +1,12 @@
 @import '../../styles/colors.scss';
 .fas.fa-search{
-  color: grey;
+  color: black;
 }
 .search-text{
   width: 250px;
   margin-top:20px ;
   border: none;
-  border-bottom: 2px solid grey;
+  border-bottom: 2px solid black;
   background-color: #EEEEEE;
   color: $light-grey;
   letter-spacing: 2px;
@@ -21,5 +21,6 @@
   
   &::placeholder{
     font-style: italic;
+    color: black;
   }
 }

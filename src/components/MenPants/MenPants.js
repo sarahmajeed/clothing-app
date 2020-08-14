@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import PantList from '../PantList/PantList';
+import PantList from '../Lists/PantList/PantList';
 import SearchBox from '../SearchBox/SearchBox'
 
 function MenPants() {
