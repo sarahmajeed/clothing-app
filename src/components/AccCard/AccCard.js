@@ -10,7 +10,9 @@ function AccCard({ acc, search }) {
         filteredAcc.map(acc => {
           return (
             <div className="card">
-              <img className="img" src={acc.accimg} alt="error" />
+              <div className="container">
+                <img className="img" src={acc.accimg} alt="error" />
+              </div>
               <div className="tag">{acc.tag}</div>
               <div className="price">Price: Rs. {acc.accprice}</div>
             </div>

@@ -7,13 +7,19 @@ function KurtiCard({ kurtis, search }) {
     return kurti.tag.toLowerCase().includes(search.toLowerCase())
   })
 
+  const handlePictureClick = () => {
+    console.log('working')
+  }
+
   return (
     <div className="kurticard">
       {
         filteredKurtis.map(kurti => {
           return (
-            <div className="card">
-              <img className="img" src={kurti.kurtiimg} alt="error" />
+            <div onClick={handlePictureClick} className="card">
+              <div className="container">
+                <img className="img" src={kurti.kurtiimg} alt="error" />
+              </div>
               <div className="tag">{kurti.tag}</div>
               <div className="price">Price: Rs. {kurti.kurtiprice}</div>
             </div>

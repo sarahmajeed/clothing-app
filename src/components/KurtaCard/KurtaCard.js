@@ -11,7 +11,9 @@ function KurtaCard({ kurtas, search }) {
           filteredKurtas.map(kurta => {
             return (
               <div className="card">
-                <img className="img" src={kurta.kurtaimg} alt="error" />
+                <div className="container">
+                  <img className="img" src={kurta.kurtaimg} alt="error" />
+                </div>
                 <div className="tag">{kurta.tag}</div>
                 <div className="price">Price: Rs. {kurta.kurtaprice}</div>
               </div>

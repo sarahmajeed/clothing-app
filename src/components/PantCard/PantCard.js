@@ -10,7 +10,9 @@ function PantCard({ pants, search }) {
         filteredPants.map(pant => {
           return (
             <div className="card">
-              <img className="img" src={pant.pantimg} alt="error" />
+              <div className="container">
+                <img className="img" src={pant.pantimg} alt="error" />
+              </div>
               <div className="tag">{pant.tag}</div>
               <div className="price">Price: Rs. {pant.pantprice}</div>
             </div>
