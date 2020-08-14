@@ -1,3 +1,5 @@
+@import '../../styles/_colors.scss';
+
 .kurticard{
 display: grid;
 grid-template-columns: auto auto auto;
@@ -27,7 +29,16 @@ grid-template-columns: auto auto auto;
 }
 .tag{
   margin-top: 15px;
-  font-size: large;
+  
+  color: $light-black;
+}
+.span{
+  height: 1px;
+  width: 300px;
+  margin:10px 0;
+  background-color: $grey;
+  opacity: 0.4;
+  display: block;
 }
 }
 

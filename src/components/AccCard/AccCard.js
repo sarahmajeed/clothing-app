@@ -14,6 +14,7 @@ function AccCard({ acc, search }) {
                 <img className="img" src={acc.accimg} alt="error" />
               </div>
               <div className="tag">{acc.tag}</div>
+              <div className="span"></div>
               <div className="price">Price: Rs. {acc.accprice}</div>
             </div>
           )

@@ -14,6 +14,7 @@ function PantCard({ pants, search }) {
                 <img className="img" src={pant.pantimg} alt="error" />
               </div>
               <div className="tag">{pant.tag}</div>
+              <div className="span"></div>
               <div className="price">Price: Rs. {pant.pantprice}</div>
             </div>
           )

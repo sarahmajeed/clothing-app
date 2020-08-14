@@ -15,6 +15,7 @@ function ShirtCard({ shirts, search }) {
                   <img className="img" src={shirt.shirtimg} alt="error" />
                 </div>
                 <div className="tag">{shirt.tag}</div>
+                <div className="span"></div>
                 <div className="price">Price: Rs. {shirt.shirtprice}</div>
               </div>
             )

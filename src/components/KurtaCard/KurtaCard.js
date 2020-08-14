@@ -15,6 +15,7 @@ function KurtaCard({ kurtas, search }) {
                   <img className="img" src={kurta.kurtaimg} alt="error" />
                 </div>
                 <div className="tag">{kurta.tag}</div>
+                <div className="span"></div>
                 <div className="price">Price: Rs. {kurta.kurtaprice}</div>
               </div>
             )
