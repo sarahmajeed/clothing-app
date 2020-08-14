@@ -33,7 +33,7 @@ const Navbar = () => {
         <h4>
           <a href="/">
             <span className="e">Ǝ</span>
-            <span>COMPANY</span>
+            <span>CLOTHING</span>
           </a>
         </h4>
       </div>
