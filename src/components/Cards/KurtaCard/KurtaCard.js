@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom'
 
 function KurtaCard({ kurtas, search }) {
   const filteredKurtas = kurtas.filter(kurta => {
@@ -10,14 +11,16 @@ function KurtaCard({ kurtas, search }) {
         {
           filteredKurtas.map(kurta => {
             return (
-              <div className="card">
-                <div className="container">
-                  <img className="img" src={kurta.kurtaimg} alt="error" />
+              <Link className="link" to={`/men/kurta/${kurta.kurtaid}`}>
+                <div className="card">
+                  <div className="container">
+                    <img className="img" src={kurta.kurtaimg} alt="error" />
+                  </div>
+                  <div className="tag">{kurta.tag}</div>
+                  <div className="span"></div>
+                  <div className="price">Price: Rs. {kurta.kurtaprice}</div>
                 </div>
-                <div className="tag">{kurta.tag}</div>
-                <div className="span"></div>
-                <div className="price">Price: Rs. {kurta.kurtaprice}</div>
-              </div>
+              </Link>
             )
           })
         }

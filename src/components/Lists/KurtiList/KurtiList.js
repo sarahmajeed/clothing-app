@@ -1,7 +1,7 @@
 import React from 'react'
 import KurtiCard from '../../Cards/KurtiCard/KurtiCard'
 
-function KurtiList({ kurtis, setKurtis, search }) {
+function KurtiList({ kurtis, search }) {
 
   return (
     <div>

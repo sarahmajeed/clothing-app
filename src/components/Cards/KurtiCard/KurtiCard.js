@@ -1,5 +1,7 @@
-import React from 'react'
-import './KurtiCard.scss'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
+import './KurtiCard.scss';
+
 
 function KurtiCard({ kurtis, search }) {
 
@@ -7,27 +9,30 @@ function KurtiCard({ kurtis, search }) {
     return kurti.tag.toLowerCase().includes(search.toLowerCase())
   })
 
-  const handlePictureClick = () => {
-    console.log('working')
-  }
+  // const handlePictureClick = () => {
+  //   console.log('working')
+  // }
 
   return (
+
     <div className="kurticard">
       {
         filteredKurtis.map(kurti => {
           return (
-            <div onClick={handlePictureClick} className="card">
-              <div className="container">
-                <img className="img" src={kurti.kurtiimg} alt="error" />
+            <Link className="link" to={`/women/kurtis/${kurti.kurtiid}`}>
+              <div className="card">
+                <div className="container">
+                  <img className="img" src={kurti.kurtiimg} alt="error" />
+                </div>
+                <div className="tag">{kurti.tag}</div>
+                <div className="span"></div>
+                <div className="price">Price: Rs. {kurti.kurtiprice}</div>
               </div>
-              <div className="tag">{kurti.tag}</div>
-              <div className="span"></div>
-              <div className="price">Price: Rs. {kurti.kurtiprice}</div>
-            </div>
+            </Link>
           )
         })
       }
-    </div>
+    </div >
   )
 }
 

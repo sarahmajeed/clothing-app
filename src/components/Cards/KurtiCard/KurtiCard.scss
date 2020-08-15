@@ -5,11 +5,23 @@ display: grid;
 grid-template-columns: auto auto auto;
 
 
+.link{
+  text-decoration: none;
+  &:visited{
+    color: blue;
+  }
+  &:active{
+    color: darkblue;
+  }
+
 .card {
-  height: 100vh;
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
+}
+  
   
 }
 .container{
@@ -30,6 +42,10 @@ grid-template-columns: auto auto auto;
 .tag{
   margin-top: 15px;
   color: $light-black;
+  text-decoration: none;
+}
+.price{
+  text-decoration: none;
 }
 .span{
   height: 1px;
