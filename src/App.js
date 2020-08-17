@@ -19,14 +19,14 @@ import IndividualShirt from "./pages/IndividualShirt/IndividualShirt";
 import IndividualKurta from "./pages/IndividualKurta/IndividualKurta";
 import IndividualPant from "./pages/IndividualPant/IndividualPant";
 import IndividualAcc from "./pages/IndividualAcc/IndividualAcc";
-
+import UserForm from "./components/BillForm/UserForm";
 function App() {
   return (
     <div className="App">
       <Navbar />
       {/* importing homepage route */}
       <Route exact path="/" render={() => <HomePage />} />
-
+      <Route exact path="/billingform" render={() => <UserForm />} />
       <Route exact path="/signup" render={() => <Signup />} />
       <Route exact path="/signin" render={() => <Signin />} />
       <Route exact path="/about" render={() => <About />} />
@@ -36,12 +36,48 @@ function App() {
       <Route exact path="/men/shirts" render={() => <MenShirts />} />
       <Route exact path="/men/kurta" render={() => <MenKurta />} />
       <Route exact path="/accessories" render={() => <Accessories />} />
-      <Route exact path="/women/kurtis/:id" render={(routeProps) => <IndividualKurti id={routeProps.match.params.id} />} />
-      <Route exact path="/women/trousers/:id" render={(routeProps) => <IndividualTrouser id={routeProps.match.params.id} />} />
-      <Route exact path="/men/shirts/:id" render={(routeProps) => <IndividualShirt id={routeProps.match.params.id} />} />
-      <Route exact path="/men/kurta/:id" render={(routeProps) => <IndividualKurta id={routeProps.match.params.id} />} />
-      <Route exact path="/men/pants/:id" render={(routeProps) => <IndividualPant id={routeProps.match.params.id} />} />
-      <Route exact path="/accessories/:id" render={(routeProps) => <IndividualAcc id={routeProps.match.params.id} />} />
+      <Route
+        exact
+        path="/women/kurtis/:id"
+        render={(routeProps) => (
+          <IndividualKurti id={routeProps.match.params.id} />
+        )}
+      />
+      <Route
+        exact
+        path="/women/trousers/:id"
+        render={(routeProps) => (
+          <IndividualTrouser id={routeProps.match.params.id} />
+        )}
+      />
+      <Route
+        exact
+        path="/men/shirts/:id"
+        render={(routeProps) => (
+          <IndividualShirt id={routeProps.match.params.id} />
+        )}
+      />
+      <Route
+        exact
+        path="/men/kurta/:id"
+        render={(routeProps) => (
+          <IndividualKurta id={routeProps.match.params.id} />
+        )}
+      />
+      <Route
+        exact
+        path="/men/pants/:id"
+        render={(routeProps) => (
+          <IndividualPant id={routeProps.match.params.id} />
+        )}
+      />
+      <Route
+        exact
+        path="/accessories/:id"
+        render={(routeProps) => (
+          <IndividualAcc id={routeProps.match.params.id} />
+        )}
+      />
 
       {/* Footer */}
       <footer className="footer">
