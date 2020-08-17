@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 
 function IndividualTrouser({ id }) {
-  const [indTrouser, setIndTrouser] = useState({});
+  const [indTrouser, setIndTrouser] = useState([]);
   useEffect(() => {
     fetch(`http://localhost:5000/women/trousers/${id}`, {
       method: 'get',
@@ -12,7 +12,7 @@ function IndividualTrouser({ id }) {
       .then(res => res.json())
       .then(res => {
         console.log(res)
-        setIndTrouser(res)
+        setIndTrouser(res[0])
       })
   }, [id])
   return (

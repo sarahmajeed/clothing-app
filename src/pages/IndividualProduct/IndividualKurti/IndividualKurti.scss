@@ -14,7 +14,6 @@ i {
 
 /* 4. Elements - HTML Elements of the page h1-h6, etc. */
 
-
 a {
   color: #235ba8;
   text-decoration: none;
@@ -84,7 +83,7 @@ input[type="button"] {
   display: block;
   height: 90vh;
   display: flex;
-  
+
   justify-content: center;
   top: 0;
   width: 100vw;
@@ -288,7 +287,9 @@ i.fa-star.rating {
     ul {
       list-style: none;
 
-      li {
+      .red,
+      .yellow,
+      .green {
         text-align: center;
         justify-content: center;
         width: 40px;
@@ -296,6 +297,12 @@ i.fa-star.rating {
         border: 1px solid black;
         padding-top: 8px;
         margin-left: 10px;
+        &:hover {
+          cursor: pointer;
+        }
+        &:active {
+          background-color: yellow;
+        }
       }
     }
   }

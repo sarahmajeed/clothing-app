@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 
 function IndividualAcc({ id }) {
-  const [indAcc, setIndAcc] = useState({});
+  const [indAcc, setIndAcc] = useState([]);
   useEffect(() => {
     fetch(`http://localhost:5000/accessories/${id}`, {
       method: 'get',
@@ -12,7 +12,7 @@ function IndividualAcc({ id }) {
       .then(res => res.json())
       .then(res => {
         console.log(res)
-        setIndAcc(res)
+        setIndAcc(res[0])
       })
   }, [id])
   return (

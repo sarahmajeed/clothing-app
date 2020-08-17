@@ -1,30 +1,67 @@
-import React, { useEffect } from 'react';
-import './IndividualKurti.scss'
-import { useState } from 'react';
+import React, { useEffect } from "react";
+import "./IndividualKurti.scss";
+import { useState } from "react";
 
-function IndividualKurti({ id }) {
-  const [indKurti, setIndKurti] = useState({});
+function IndividualKurti({ id, handleCart }) {
+  const [indKurti, setIndKurti] = useState([]);
+  const [quantity, setQuantity] = useState(0);
+  const [isSmall, setIsSmall] = useState(false);
+  const [isMedium, setIsMedium] = useState(false);
+  const [isLarge, setIsLarge] = useState(false);
+
+  const handleRight = () => {
+    if (quantity < 10) {
+      setQuantity(quantity + 1);
+    }
+    console.log("handle right working");
+  };
+  const handleLeft = () => {
+    if (quantity > 0) {
+      setQuantity(quantity - 1);
+    } else {
+      setQuantity(0);
+    }
+    console.log("handle Left working");
+  };
+
+  const handleSmall = () => {
+    setIsLarge(false);
+    setIsMedium(false);
+    setIsSmall(true);
+    console.log("inside small");
+  };
+  const handleMedium = () => {
+    setIsSmall(false);
+    setIsLarge(false);
+    setIsMedium(true);
+    console.log("inside Medium");
+  };
+  const handleLarge = () => {
+    setIsLarge(true);
+    setIsMedium(false);
+    setIsSmall(false);
+    console.log("inside Large");
+  };
+
   useEffect(() => {
     fetch(`http://localhost:5000/women/kurtis/${id}`, {
-      method: 'get',
-      headers: { 'Content-Type': 'application/json' },
+      method: "get",
+      headers: { "Content-Type": "application/json" },
     })
-      .then(res => res.json())
-      .then(res => {
-        console.log(res)
-        setIndKurti(res)
-      })
-  }, [id])
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+        setIndKurti(res[0]);
+      });
+  }, [id]);
+
   return (
     <div className="lightbox-blanket">
-
       <div classNameName="pop-up-container">
         <div className="pop-up-container-vertical">
           <div className="pop-up-wrapper">
             <div className="go-back">
-              <i className="fa fa-arrow-left">
-
-              </i>
+              <i className="fa fa-arrow-left"></i>
             </div>
             <div className="product-details">
               <div className="product-left">
@@ -37,12 +74,7 @@ function IndividualKurti({ id }) {
                   </div>
                 </div>
                 <div className="product-image">
-                  <img
-                    src=
-                    {indKurti.kurtiimg}
-
-                    alt="1"
-                  />
+                  <img src={indKurti.kurtiimg} alt="1" />
                 </div>
               </div>
               <div className="product-right">
@@ -50,19 +82,30 @@ function IndividualKurti({ id }) {
                   {indKurti.description}
                 </div>
                 <div className="product-available">
-                  In stock.
-            </div>
+                  {isSmall
+                    ? `${indKurti.smallquantity} In stock.`
+                    : isLarge
+                    ? `${indKurti.largequantity} In stock.`
+                    : isMedium
+                    ? `${indKurti.mediumquantity} In stock.`
+                    : null}
+                  {""}
+                </div>
                 <div className="product-color">
-                  <label
-                    className="product-color-label"
-                  >
+                  <label className="product-color-label">
                     {indKurti.color}
                   </label>
                   <div className="product-color-shades">
                     <ul>
-                      <li className="red">S</li>
-                      <li className="yellow">M</li>
-                      <li className="green">L</li>
+                      <li onClick={handleSmall} className="red">
+                        S
+                      </li>
+                      <li onClick={handleMedium} className="yellow">
+                        M
+                      </li>
+                      <li onClick={handleLarge} className="green">
+                        L
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -72,42 +115,38 @@ function IndividualKurti({ id }) {
                     className="product-quantity-label"
                   >
                     Quantity
-              </label>
+                  </label>
                   <div className="product-quantity-subtract">
-                    <i className="fa fa-arrow-left">
-
-                    </i>
+                    <i className="fa fa-arrow-left" onClick={handleLeft}></i>
                   </div>
                   <div>
                     <input
                       type="text"
                       id="product-quantity-input"
                       placeholder="0"
-                      value="0"
+                      value={quantity}
                     />
                   </div>
                   <div className="product-quantity-add">
-                    <i className="fa fa-arrow-right">
-                    </i>
+                    <i className="fa fa-arrow-right" onClick={handleRight}></i>
                   </div>
                 </div>
               </div>
               <div className="product-bottom">
                 <div className="product-checkout">
                   Total Price
-              <div className="product-checkout-total">
+                  <div className="product-checkout-total">
                     <i className="fa fa-usd"></i>
                     <div className="product-checkout-total-amount">0.00</div>
                   </div>
                 </div>
                 <div className="product-checkout-actions">
-                  <a
-                    className="add-to-cart"
-                    href="www.fb.com"
-                    onclick="AddToCart(event);"
+                  <button
+                    className="btn"
+                    onClick={() => handleCart(indKurti.kurtiid)}
                   >
                     Add to Cart
-              </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -115,7 +154,7 @@ function IndividualKurti({ id }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default IndividualKurti
+export default IndividualKurti;

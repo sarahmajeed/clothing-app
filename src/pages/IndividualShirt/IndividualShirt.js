@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 
 function IndividualShirt({ id }) {
-  const [indShirt, setIndShirt] = useState({});
+  const [indShirt, setIndShirt] = useState([]);
   useEffect(() => {
     fetch(`http://localhost:5000/men/shirts/${id}`, {
       method: 'get',
@@ -12,7 +12,7 @@ function IndividualShirt({ id }) {
       .then(res => res.json())
       .then(res => {
         console.log(res)
-        setIndShirt(res)
+        setIndShirt(res[0])
       })
   }, [id])
   return (

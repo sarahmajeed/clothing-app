@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 
 function IndividualPant({ id }) {
-  const [indPant, setIndPant] = useState({});
+  const [indPant, setIndPant] = useState([]);
   useEffect(() => {
     fetch(`http://localhost:5000/men/pants/${id}`, {
       method: 'get',
@@ -12,7 +12,7 @@ function IndividualPant({ id }) {
       .then(res => res.json())
       .then(res => {
         console.log(res)
-        setIndPant(res)
+        setIndPant(res[0])
       })
   }, [id])
   return (

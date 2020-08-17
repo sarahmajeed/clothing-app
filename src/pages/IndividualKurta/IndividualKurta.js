@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 
 function IndividualKurta({ id }) {
-  const [indKurta, setIndKurta] = useState({});
+  const [indKurta, setIndKurta] = useState([]);
   useEffect(() => {
     fetch(`http://localhost:5000/men/kurta/${id}`, {
       method: 'get',
@@ -12,7 +12,7 @@ function IndividualKurta({ id }) {
       .then(res => res.json())
       .then(res => {
         console.log(res)
-        setIndKurta(res)
+        setIndKurta(res[0])
       })
   }, [id])
   return (
