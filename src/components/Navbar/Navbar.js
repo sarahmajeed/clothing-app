@@ -88,7 +88,7 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="/cart">
             <i className="fa fa-cart-arrow-down"></i>
           </a>
         </li>
