@@ -245,6 +245,12 @@ input[type="button"] {
   margin-top: 25px;
   color: blue;
   font-weight: 700;
+  .hid {
+    display: none;
+  }
+  .hid.visible {
+    display: block;
+  }
 }
 
 .product-rating {

@@ -44,18 +44,25 @@ function App() {
   };
 
   const handleSmall = () => {
+    const hidden = document.querySelector(".hid");
+    hidden.classList.remove("visible");
     setIsLarge(false);
     setIsMedium(false);
     setIsSmall(true);
+
     console.log("inside small");
   };
   const handleMedium = () => {
+    const hidden = document.querySelector(".hid");
+    hidden.classList.remove("visible");
     setIsSmall(false);
     setIsLarge(false);
     setIsMedium(true);
     console.log("inside Medium");
   };
   const handleLarge = () => {
+    const hidden = document.querySelector(".hid");
+    hidden.classList.remove("visible");
     setIsLarge(true);
     setIsMedium(false);
     setIsSmall(false);
@@ -94,9 +101,10 @@ function App() {
           <IndividualKurti
             id={routeProps.match.params.id}
             handleCart={handleCart}
-            handleRight={handleRight}
+            // handleRight={handleRight}
             quantity={quantity}
-            handleLeft={handleLeft}
+            // handleLeft={handleLeft}
+            setQuantity={setQuantity}
             handleMedium={handleMedium}
             handleLarge={handleLarge}
             handleSmall={handleSmall}
