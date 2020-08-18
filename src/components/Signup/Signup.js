@@ -1,19 +1,38 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { withRouter } from 'react-router-dom';
-import './Signup.scss';
-
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
+import "./Signup.scss";
 
 class Signup extends Component {
   constructor() {
     super();
     this.state = {
-      username: '',
-      email: '',
-      password: '',
+      username: "",
+      email: "",
+      password: "",
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleRegister = this.handleRegister.bind(this);
   }
+
+  handleRegister(event) {
+    event.preventDefault();
+    fetch("http://localhost:5000/register", {
+      method: "post",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: this.state.username,
+        email: this.state.email,
+        password: this.state.password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((user) => {
+        console.log(user);
+      });
+    console.log("sign up working");
+  }
+
   handleChange(event) {
     const { name, value } = event.target;
     this.setState({
@@ -24,66 +43,66 @@ class Signup extends Component {
   render() {
     const { username, email, password } = this.state;
     return (
-      <div class='main'>
-        <form class='form'>
-          <p class='head'>Create new customer account</p>
-          <span className='span'></span>
+      <div class="main">
+        <form class="form">
+          <p class="head">Create new customer account</p>
+          <span className="span"></span>
 
           {/* input */}
-          <div className='input-grp'>
-            <div className='label'>
-              <label className='label' htmlFor='username'>
+          <div className="input-grp">
+            <div className="label">
+              <label className="label" htmlFor="username">
                 Full Name
               </label>
             </div>
             {/* user-icon */}
-            <i className='fas fa-user fa-s icon'></i>
+            <i className="fas fa-user fa-s icon"></i>
             <input
-              name='username'
-              type='text'
+              name="username"
+              type="text"
               value={username}
               onChange={this.handleChange}
-              placeholder='Name'
-              className='input'
+              placeholder="Name"
+              className="input"
               required
             />
             {/* label */}
           </div>
 
-          <div className='input-grp'>
-            <div className='label'>
-              <label className='label' htmlFor='email'>
+          <div className="input-grp">
+            <div className="label">
+              <label className="label" htmlFor="email">
                 Email
               </label>
             </div>
             {/* Email icon */}
-            <i class='fas fa-envelope fa-s icon'></i>
+            <i class="fas fa-envelope fa-s icon"></i>
             <input
-              name='email'
-              type='email'
+              name="email"
+              type="email"
               value={email}
               onChange={this.handleChange}
-              placeholder='Email'
-              className='input'
+              placeholder="Email"
+              className="input"
               required
             />
           </div>
 
-          <div className='input-grp'>
-            <div className='label'>
-              <label className='label' htmlFor='password'>
+          <div className="input-grp">
+            <div className="label">
+              <label className="label" htmlFor="password">
                 Password
               </label>
             </div>
             {/* password icon */}
-            <i class='fas fa-key fa-s icon'></i>
+            <i class="fas fa-key fa-s icon"></i>
             <input
-              name='password'
-              type='password'
+              name="password"
+              type="password"
               value={password}
               onChange={this.handleChange}
-              placeholder='Password'
-              className='input'
+              placeholder="Password"
+              className="input"
               required
             />
           </div>
@@ -93,18 +112,13 @@ class Signup extends Component {
               <button className="btn">Back</button>
             </Link>
 
-
-            <button onClick={this.props.handleSignin} className='btn'>
+            <button onClick={this.handleRegister} className="btn">
               Sign Up
-          </button>
-
+            </button>
           </div>
           {/* <p className='terms'>
               By signing up, you agree to our Terms of Use and Privacy Policy.
             </p> */}
-
-
-
         </form>
       </div>
     );
