@@ -4,8 +4,7 @@ import { useState } from "react";
 
 function IndividualKurta({
   id,
-  handleRight,
-  handleLeft,
+  setQuantity,
   handleLarge,
   handleSmall,
   handleMedium,
@@ -26,6 +25,33 @@ function IndividualKurta({
         setIndKurta(res[0]);
       });
   }, [id]);
+  const handleRight = () => {
+    if (isSmall === true) {
+      if (quantity < indKurta.smallquantity) {
+        setQuantity(quantity + 1);
+      }
+    } else if (isMedium === true) {
+      if (quantity < indKurta.mediumquantity) {
+        setQuantity(quantity + 1);
+      }
+    } else if (isLarge === true) {
+      if (quantity < indKurta.largequantity) {
+        setQuantity(quantity + 1);
+      }
+    } else {
+      const hidden = document.querySelector(".hid");
+      hidden.classList.add("visible");
+    }
+    console.log("handle right working");
+  };
+  const handleLeft = () => {
+    if (quantity > 0) {
+      setQuantity(quantity - 1);
+    } else {
+      setQuantity(0);
+    }
+    console.log("handle Left working");
+  };
   return (
     <div className="lightbox-blanket">
       <div classNameName="pop-up-container">
@@ -61,6 +87,7 @@ function IndividualKurta({
                     ? `${indKurta.mediumquantity} In stock.`
                     : null}
                   {""}
+                  <div className="hid">Please Select a size</div>
                 </div>
                 <div className="product-color">
                   <label className="product-color-label">

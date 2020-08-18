@@ -120,8 +120,7 @@ function App() {
         render={(routeProps) => (
           <IndividualTrouser
             id={routeProps.match.params.id}
-            handleRight={handleRight}
-            handleLeft={handleLeft}
+            setQuantity={setQuantity}
             quantity={quantity}
             handleMedium={handleMedium}
             handleLarge={handleLarge}
@@ -138,8 +137,7 @@ function App() {
         render={(routeProps) => (
           <IndividualShirt
             id={routeProps.match.params.id}
-            handleRight={handleRight}
-            handleLeft={handleLeft}
+            setQuantity={setQuantity}
             quantity={quantity}
             handleMedium={handleMedium}
             handleLarge={handleLarge}
@@ -156,8 +154,7 @@ function App() {
         render={(routeProps) => (
           <IndividualKurta
             id={routeProps.match.params.id}
-            handleRight={handleRight}
-            handleLeft={handleLeft}
+            setQuantity={setQuantity}
             quantity={quantity}
             handleMedium={handleMedium}
             handleLarge={handleLarge}
@@ -174,8 +171,7 @@ function App() {
         render={(routeProps) => (
           <IndividualPant
             id={routeProps.match.params.id}
-            handleRight={handleRight}
-            handleLeft={handleLeft}
+            setQuantity={setQuantity}
             quantity={quantity}
             handleMedium={handleMedium}
             handleLarge={handleLarge}
@@ -192,8 +188,7 @@ function App() {
         render={(routeProps) => (
           <IndividualAcc
             id={routeProps.match.params.id}
-            handleRight={handleRight}
-            handleLeft={handleLeft}
+            setQuantity={setQuantity}
             quantity={quantity}
             handleMedium={handleMedium}
             handleLarge={handleLarge}
