@@ -1,4 +1,3 @@
-
 import React from "react";
 import "./App.scss";
 import { Route } from "react-router-dom";
@@ -26,6 +25,17 @@ function App() {
   const [isSmall, setIsSmall] = useState(false);
   const [isMedium, setIsMedium] = useState(false);
   const [isLarge, setIsLarge] = useState(false);
+  const [id, setId] = useState();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [joined, setJoined] = useState("");
+
+  const loadUser = (data) => {
+    setId(data.id);
+    setName(data.name);
+    setEmail(data.email);
+    setJoined(data.joined);
+  };
 
   const handleSmall = () => {
     const hidden = document.querySelector(".hid");
@@ -59,8 +69,20 @@ function App() {
       {/* importing homepage route */}
       <Route exact path="/" render={() => <HomePage />} />
 
-      <Route exact path="/signup" render={() => <Signup />} />
-      <Route exact path="/signin" render={() => <Signin />} />
+      <Route
+        exact
+        path="/signup"
+        render={(routeProps) => (
+          <Signup loadUser={loadUser} routeProps={routeProps} />
+        )}
+      />
+      <Route
+        exact
+        path="/signin"
+        render={(routeProps) => (
+          <Signin loadUser={loadUser} routeProps={routeProps} />
+        )}
+      />
       <Route exact path="/about" render={() => <About />} />
       <Route exact path="/women/kurtis" render={() => <WomenKurtis />} />
       <Route exact path="/women/trousers" render={() => <WomenTrousers />} />

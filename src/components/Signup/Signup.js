@@ -12,12 +12,12 @@ class Signup extends Component {
       password: "",
     };
     this.handleChange = this.handleChange.bind(this);
-    this.handleRegister = this.handleRegister.bind(this);
+    this.handleSignup = this.handleSignup.bind(this);
   }
 
-  handleRegister(event) {
+  handleSignup = (event) => {
     event.preventDefault();
-    fetch("http://localhost:5000/register", {
+    fetch("http://localhost:5000/signup", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -28,10 +28,13 @@ class Signup extends Component {
     })
       .then((res) => res.json())
       .then((user) => {
-        console.log(user);
+        if (user) {
+          this.props.routeProps.history.push("/facedetect");
+          this.props.loadUser(user);
+          console.log(user);
+        }
       });
-    console.log("sign up working");
-  }
+  };
 
   handleChange(event) {
     const { name, value } = event.target;
@@ -112,7 +115,7 @@ class Signup extends Component {
               <button className="btn">Back</button>
             </Link>
 
-            <button onClick={this.handleRegister} className="btn">
+            <button onClick={this.handleSignup} className="btn">
               Sign Up
             </button>
           </div>

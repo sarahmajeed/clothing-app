@@ -19,22 +19,25 @@ class Signin extends Component {
     });
   }
 
-  handleSignin(event) {
+  handleSignin = (event) => {
     event.preventDefault();
     fetch("http://localhost:5000/signin", {
       method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         email: this.state.email,
         password: this.state.password,
       }),
     })
       .then((res) => res.json())
-      .then(console.log);
-    console.log("sign up");
-  }
+      .then((user) => {
+        console.log(user);
+        if (user.id) {
+          this.props.loadUser(user);
+          this.props.routeProps.history.push("/facedetect");
+        }
+      });
+  };
 
   render() {
     const { email, password } = this.state;
