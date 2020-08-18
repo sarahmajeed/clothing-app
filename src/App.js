@@ -21,27 +21,10 @@ import IndividualPant from "./pages/IndividualPant/IndividualPant";
 import IndividualAcc from "./pages/IndividualAcc/IndividualAcc";
 
 function App() {
-  const initialCartItems = JSON.parse(localStorage.getItem("kurtis")) || [];
-  const [cartItems, setCartItems] = useState([initialCartItems]);
   const [quantity, setQuantity] = useState(0);
   const [isSmall, setIsSmall] = useState(false);
   const [isMedium, setIsMedium] = useState(false);
   const [isLarge, setIsLarge] = useState(false);
-
-  const handleRight = () => {
-    if (quantity < 10) {
-      setQuantity(quantity + 1);
-    }
-    console.log("handle right working");
-  };
-  const handleLeft = () => {
-    if (quantity > 0) {
-      setQuantity(quantity - 1);
-    } else {
-      setQuantity(0);
-    }
-    console.log("handle Left working");
-  };
 
   const handleSmall = () => {
     const hidden = document.querySelector(".hid");
@@ -69,19 +52,9 @@ function App() {
     console.log("inside Large");
   };
 
-  const handleCart = (id) => {
-    console.log("before", cartItems);
-    cartItems.push(id);
-    setCartItems(cartItems);
-    console.log("after", cartItems);
-
-    localStorage.setItem("kurtis", JSON.stringify(id));
-    console.log(JSON.parse(localStorage.getItem("kurtis")));
-  };
-
   return (
     <div className="App">
-      <Navbar cartItems={cartItems} />
+      <Navbar />
       {/* importing homepage route */}
       <Route exact path="/" render={() => <HomePage />} />
 
@@ -100,7 +73,6 @@ function App() {
         render={(routeProps) => (
           <IndividualKurti
             id={routeProps.match.params.id}
-            handleCart={handleCart}
             // handleRight={handleRight}
             quantity={quantity}
             // handleLeft={handleLeft}

@@ -139,13 +139,7 @@ function IndividualShirt({
                   </div>
                 </div>
                 <div className="product-checkout-actions">
-                  <a
-                    className="add-to-cart"
-                    href="www.fb.com"
-                    onclick="AddToCart(event);"
-                  >
-                    Add to Cart
-                  </a>
+                  <button className="btn">Add to Cart</button>
                 </div>
               </div>
             </div>
