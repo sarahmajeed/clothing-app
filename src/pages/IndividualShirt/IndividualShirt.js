@@ -1,30 +1,38 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
-import { useState } from 'react';
+import { useState } from "react";
 
-function IndividualShirt({ id }) {
+function IndividualShirt({
+  id,
+  handleRight,
+  handleLeft,
+  handleLarge,
+  handleSmall,
+  handleMedium,
+  isSmall,
+  isLarge,
+  isMedium,
+  quantity,
+}) {
   const [indShirt, setIndShirt] = useState([]);
   useEffect(() => {
     fetch(`http://localhost:5000/men/shirts/${id}`, {
-      method: 'get',
-      headers: { 'Content-Type': 'application/json' },
+      method: "get",
+      headers: { "Content-Type": "application/json" },
     })
-      .then(res => res.json())
-      .then(res => {
-        console.log(res)
-        setIndShirt(res[0])
-      })
-  }, [id])
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+        setIndShirt(res[0]);
+      });
+  }, [id]);
   return (
     <div className="lightbox-blanket">
-
       <div classNameName="pop-up-container">
         <div className="pop-up-container-vertical">
           <div className="pop-up-wrapper">
             <div className="go-back">
-              <i className="fa fa-arrow-left">
-
-              </i>
+              <i className="fa fa-arrow-left"></i>
             </div>
             <div className="product-details">
               <div className="product-left">
@@ -37,12 +45,7 @@ function IndividualShirt({ id }) {
                   </div>
                 </div>
                 <div className="product-image">
-                  <img
-                    src=
-                    {indShirt.shirtimg}
-
-                    alt="1"
-                  />
+                  <img src={indShirt.shirtimg} alt="1" />
                 </div>
               </div>
               <div className="product-right">
@@ -50,19 +53,30 @@ function IndividualShirt({ id }) {
                   {indShirt.description}
                 </div>
                 <div className="product-available">
-                  In stock.
-            </div>
+                  {isSmall
+                    ? `${indShirt.smallquantity} In stock.`
+                    : isLarge
+                    ? `${indShirt.largequantity} In stock.`
+                    : isMedium
+                    ? `${indShirt.mediumquantity} In stock.`
+                    : null}
+                  {""}
+                </div>
                 <div className="product-color">
-                  <label
-                    className="product-color-label"
-                  >
+                  <label className="product-color-label">
                     {indShirt.color}
                   </label>
                   <div className="product-color-shades">
                     <ul>
-                      <li className="red">S</li>
-                      <li className="yellow">M</li>
-                      <li className="green">L</li>
+                      <li onClick={handleSmall} className="red">
+                        S
+                      </li>
+                      <li onClick={handleMedium} className="yellow">
+                        M
+                      </li>
+                      <li onClick={handleLarge} className="green">
+                        L
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -72,30 +86,27 @@ function IndividualShirt({ id }) {
                     className="product-quantity-label"
                   >
                     Quantity
-              </label>
+                  </label>
                   <div className="product-quantity-subtract">
-                    <i className="fa fa-arrow-left">
-
-                    </i>
+                    <i onClick={handleLeft} className="fa fa-arrow-left"></i>
                   </div>
                   <div>
                     <input
                       type="text"
                       id="product-quantity-input"
                       placeholder="0"
-                      value="0"
+                      value={quantity}
                     />
                   </div>
                   <div className="product-quantity-add">
-                    <i className="fa fa-arrow-right">
-                    </i>
+                    <i onClick={handleRight} className="fa fa-arrow-right"></i>
                   </div>
                 </div>
               </div>
               <div className="product-bottom">
                 <div className="product-checkout">
                   Total Price
-              <div className="product-checkout-total">
+                  <div className="product-checkout-total">
                     <i className="fa fa-usd"></i>
                     <div className="product-checkout-total-amount">0.00</div>
                   </div>
@@ -107,7 +118,7 @@ function IndividualShirt({ id }) {
                     onclick="AddToCart(event);"
                   >
                     Add to Cart
-              </a>
+                  </a>
                 </div>
               </div>
             </div>
@@ -115,7 +126,7 @@ function IndividualShirt({ id }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default IndividualShirt
+export default IndividualShirt;

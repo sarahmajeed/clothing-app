@@ -23,22 +23,44 @@ import IndividualAcc from "./pages/IndividualAcc/IndividualAcc";
 function App() {
   const initialCartItems = JSON.parse(localStorage.getItem("kurtis")) || [];
   const [cartItems, setCartItems] = useState([initialCartItems]);
-  // const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(0);
+  const [isSmall, setIsSmall] = useState(false);
+  const [isMedium, setIsMedium] = useState(false);
+  const [isLarge, setIsLarge] = useState(false);
 
-  // const handleRight = () => {
-  //   if (quantity < 10) {
-  //     setQuantity(quantity + 1);
-  //   }
-  //   console.log("handle right working");
-  // };
-  // const handleLeft = () => {
-  //   if (quantity > 0) {
-  //     setQuantity(quantity - 1);
-  //   } else {
-  //     setQuantity(0);
-  //   }
-  //   console.log("handle Left working");
-  // };
+  const handleRight = () => {
+    if (quantity < 10) {
+      setQuantity(quantity + 1);
+    }
+    console.log("handle right working");
+  };
+  const handleLeft = () => {
+    if (quantity > 0) {
+      setQuantity(quantity - 1);
+    } else {
+      setQuantity(0);
+    }
+    console.log("handle Left working");
+  };
+
+  const handleSmall = () => {
+    setIsLarge(false);
+    setIsMedium(false);
+    setIsSmall(true);
+    console.log("inside small");
+  };
+  const handleMedium = () => {
+    setIsSmall(false);
+    setIsLarge(false);
+    setIsMedium(true);
+    console.log("inside Medium");
+  };
+  const handleLarge = () => {
+    setIsLarge(true);
+    setIsMedium(false);
+    setIsSmall(false);
+    console.log("inside Large");
+  };
 
   const handleCart = (id) => {
     console.log("before", cartItems);
@@ -72,9 +94,15 @@ function App() {
           <IndividualKurti
             id={routeProps.match.params.id}
             handleCart={handleCart}
-            // handleRight={handleRight}
-            // quantity={quantity}
-            // handleLeft={handleLeft}
+            handleRight={handleRight}
+            quantity={quantity}
+            handleLeft={handleLeft}
+            handleMedium={handleMedium}
+            handleLarge={handleLarge}
+            handleSmall={handleSmall}
+            isSmall={isSmall}
+            isLarge={isLarge}
+            isMedium={isMedium}
           />
         )}
       />
@@ -84,9 +112,15 @@ function App() {
         render={(routeProps) => (
           <IndividualTrouser
             id={routeProps.match.params.id}
-            // handleRight={handleRight}
-            // handleLeft={handleLeft}
-            // quantity={quantity}
+            handleRight={handleRight}
+            handleLeft={handleLeft}
+            quantity={quantity}
+            handleMedium={handleMedium}
+            handleLarge={handleLarge}
+            handleSmall={handleSmall}
+            isSmall={isSmall}
+            isLarge={isLarge}
+            isMedium={isMedium}
           />
         )}
       />
@@ -96,9 +130,15 @@ function App() {
         render={(routeProps) => (
           <IndividualShirt
             id={routeProps.match.params.id}
-            // handleRight={handleRight}
-            // handleLeft={handleLeft}
-            // quantity={quantity}
+            handleRight={handleRight}
+            handleLeft={handleLeft}
+            quantity={quantity}
+            handleMedium={handleMedium}
+            handleLarge={handleLarge}
+            handleSmall={handleSmall}
+            isSmall={isSmall}
+            isLarge={isLarge}
+            isMedium={isMedium}
           />
         )}
       />
@@ -108,9 +148,15 @@ function App() {
         render={(routeProps) => (
           <IndividualKurta
             id={routeProps.match.params.id}
-            // handleRight={handleRight}
-            // handleLeft={handleLeft}
-            // quantity={quantity}
+            handleRight={handleRight}
+            handleLeft={handleLeft}
+            quantity={quantity}
+            handleMedium={handleMedium}
+            handleLarge={handleLarge}
+            handleSmall={handleSmall}
+            isSmall={isSmall}
+            isLarge={isLarge}
+            isMedium={isMedium}
           />
         )}
       />
@@ -120,9 +166,15 @@ function App() {
         render={(routeProps) => (
           <IndividualPant
             id={routeProps.match.params.id}
-            // handleRight={handleRight}
-            // handleLeft={handleLeft}
-            // quantity={quantity}
+            handleRight={handleRight}
+            handleLeft={handleLeft}
+            quantity={quantity}
+            handleMedium={handleMedium}
+            handleLarge={handleLarge}
+            handleSmall={handleSmall}
+            isSmall={isSmall}
+            isLarge={isLarge}
+            isMedium={isMedium}
           />
         )}
       />
@@ -132,9 +184,15 @@ function App() {
         render={(routeProps) => (
           <IndividualAcc
             id={routeProps.match.params.id}
-            // handleRight={handleRight}
-            // handleLeft={handleLeft}
-            // quantity={quantity}
+            handleRight={handleRight}
+            handleLeft={handleLeft}
+            quantity={quantity}
+            handleMedium={handleMedium}
+            handleLarge={handleLarge}
+            handleSmall={handleSmall}
+            isSmall={isSmall}
+            isLarge={isLarge}
+            isMedium={isMedium}
           />
         )}
       />

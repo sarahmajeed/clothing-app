@@ -2,46 +2,20 @@ import React, { useEffect } from "react";
 import "./IndividualKurti.scss";
 import { useState } from "react";
 
-function IndividualKurti({ id, handleCart }) {
+function IndividualKurti({
+  id,
+  handleCart,
+  handleRight,
+  handleLeft,
+  handleLarge,
+  handleSmall,
+  handleMedium,
+  isSmall,
+  isLarge,
+  isMedium,
+  quantity,
+}) {
   const [indKurti, setIndKurti] = useState([]);
-  const [quantity, setQuantity] = useState(0);
-  const [isSmall, setIsSmall] = useState(false);
-  const [isMedium, setIsMedium] = useState(false);
-  const [isLarge, setIsLarge] = useState(false);
-
-  const handleRight = () => {
-    if (quantity < 10) {
-      setQuantity(quantity + 1);
-    }
-    console.log("handle right working");
-  };
-  const handleLeft = () => {
-    if (quantity > 0) {
-      setQuantity(quantity - 1);
-    } else {
-      setQuantity(0);
-    }
-    console.log("handle Left working");
-  };
-
-  const handleSmall = () => {
-    setIsLarge(false);
-    setIsMedium(false);
-    setIsSmall(true);
-    console.log("inside small");
-  };
-  const handleMedium = () => {
-    setIsSmall(false);
-    setIsLarge(false);
-    setIsMedium(true);
-    console.log("inside Medium");
-  };
-  const handleLarge = () => {
-    setIsLarge(true);
-    setIsMedium(false);
-    setIsSmall(false);
-    console.log("inside Large");
-  };
 
   useEffect(() => {
     fetch(`http://localhost:5000/women/kurtis/${id}`, {
