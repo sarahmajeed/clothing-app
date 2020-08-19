@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { FormPersonalDetails } from "./FormPersonalDetails";
 import { FormBillingDetails } from "./FormBillingDetails";
 import { Confirm } from "./Confirm";
+import Success from "./Success";
 
 export class UserForm extends Component {
   state = {
@@ -83,7 +84,7 @@ export class UserForm extends Component {
           />
         );
       case 4:
-        return <h1>Success</h1>;
+        return <Success />;
       default:
         return <h1>Error</h1>;
     }
