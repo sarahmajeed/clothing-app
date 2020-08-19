@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import "./FormPersonalDetails.scss";
+import "./Confirm.scss";
 export class Confirm extends Component {
   continue = (e) => {
     e.preventDefault();
@@ -11,14 +11,7 @@ export class Confirm extends Component {
     this.props.prevStep();
   };
   render() {
-    const {
-      Name,
-      Email,
-      Address,
-      City,
-      PhoneNumber,
-      CardNumber,
-    } = this.props.value;
+    //const { value } = this.props;
     return (
       <div class="main">
         <form class="form">
