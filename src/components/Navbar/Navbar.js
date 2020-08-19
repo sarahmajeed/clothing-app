@@ -83,16 +83,6 @@ const Navbar = () => {
 
       <ul className="icons">
         <li>
-          <a href="#">
-            <i class="fa fa-heart"></i>
-          </a>
-        </li>
-        <li>
-          <a href="/cart">
-            <i className="fa fa-cart-arrow-down"></i>
-          </a>
-        </li>
-        <li>
           <a href="/signin">
             <i className="fa fa-user-circle"></i>
           </a>
