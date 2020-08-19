@@ -59,10 +59,10 @@ export class FormBillingDetails extends Component {
           </div>
 
           <div className="buttons">
-            <button onClick={this.continue} className="btn">
+            <button onClick={this.previous} className="btn">
               PREVOIUS
             </button>
-            <button onClick={this.previous} className="btn">
+            <button onClick={this.continue} className="btn">
               NEXT
             </button>
           </div>

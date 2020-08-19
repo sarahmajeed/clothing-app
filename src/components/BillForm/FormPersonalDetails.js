@@ -89,7 +89,7 @@ export class FormPersonalDetails extends Component {
 
           <div className="input-grp">
             <div className="label">
-              <label className="label" htmlFor="Address">
+              <label className="label" htmlFor="Number">
                 Phone Number
               </label>
             </div>
