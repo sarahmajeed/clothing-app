@@ -21,14 +21,73 @@ import IndividualPant from "./pages/IndividualPant/IndividualPant";
 import IndividualAcc from "./pages/IndividualAcc/IndividualAcc";
 import UserForm from "./components/BillForm/UserForm";
 function App() {
+  const [quantity, setQuantity] = useState(0);
+  const [isSmall, setIsSmall] = useState(false);
+  const [isMedium, setIsMedium] = useState(false);
+  const [isLarge, setIsLarge] = useState(false);
+  const [id, setId] = useState();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [joined, setJoined] = useState("");
+
+  const loadUser = (data) => {
+    setId(data.id);
+    setName(data.name);
+    setEmail(data.email);
+    setJoined(data.joined);
+  };
+
+  const handleSmall = () => {
+    const hidden = document.querySelector(".hid");
+    hidden.classList.remove("visible");
+    setIsLarge(false);
+    setIsMedium(false);
+    setIsSmall(true);
+
+    console.log("inside small");
+  };
+  const handleMedium = () => {
+    const hidden = document.querySelector(".hid");
+    hidden.classList.remove("visible");
+    setIsSmall(false);
+    setIsLarge(false);
+    setIsMedium(true);
+    console.log("inside Medium");
+  };
+  const handleLarge = () => {
+    const hidden = document.querySelector(".hid");
+    hidden.classList.remove("visible");
+    setIsLarge(true);
+    setIsMedium(false);
+    setIsSmall(false);
+    console.log("inside Large");
+  };
+
   return (
     <div className="App">
       <Navbar />
       {/* importing homepage route */}
       <Route exact path="/" render={() => <HomePage />} />
+
       <Route exact path="/billingform" render={() => <UserForm />} />
-      <Route exact path="/signup" render={() => <Signup />} />
-      <Route exact path="/signin" render={() => <Signin />} />
+     
+
+
+      <Route
+        exact
+        path="/signup"
+        render={(routeProps) => (
+          <Signup loadUser={loadUser} routeProps={routeProps} />
+        )}
+      />
+      <Route
+        exact
+        path="/signin"
+        render={(routeProps) => (
+          <Signin loadUser={loadUser} routeProps={routeProps} />
+        )}
+      />
+
       <Route exact path="/about" render={() => <About />} />
       <Route exact path="/women/kurtis" render={() => <WomenKurtis />} />
       <Route exact path="/women/trousers" render={() => <WomenTrousers />} />
@@ -40,42 +99,117 @@ function App() {
         exact
         path="/women/kurtis/:id"
         render={(routeProps) => (
-          <IndividualKurti id={routeProps.match.params.id} />
+
+          <IndividualKurti
+            id={routeProps.match.params.id}
+            // handleRight={handleRight}
+            quantity={quantity}
+            // handleLeft={handleLeft}
+            setQuantity={setQuantity}
+            handleMedium={handleMedium}
+            handleLarge={handleLarge}
+            handleSmall={handleSmall}
+            isSmall={isSmall}
+            isLarge={isLarge}
+            isMedium={isMedium}
+          />
+
         )}
       />
       <Route
         exact
         path="/women/trousers/:id"
         render={(routeProps) => (
-          <IndividualTrouser id={routeProps.match.params.id} />
+
+          <IndividualTrouser
+            id={routeProps.match.params.id}
+            setQuantity={setQuantity}
+            quantity={quantity}
+            handleMedium={handleMedium}
+            handleLarge={handleLarge}
+            handleSmall={handleSmall}
+            isSmall={isSmall}
+            isLarge={isLarge}
+            isMedium={isMedium}
+          />
+
         )}
       />
       <Route
         exact
         path="/men/shirts/:id"
         render={(routeProps) => (
-          <IndividualShirt id={routeProps.match.params.id} />
+=
+          <IndividualShirt
+            id={routeProps.match.params.id}
+            setQuantity={setQuantity}
+            quantity={quantity}
+            handleMedium={handleMedium}
+            handleLarge={handleLarge}
+            handleSmall={handleSmall}
+            isSmall={isSmall}
+            isLarge={isLarge}
+            isMedium={isMedium}
+          />
+
         )}
       />
       <Route
         exact
         path="/men/kurta/:id"
         render={(routeProps) => (
-          <IndividualKurta id={routeProps.match.params.id} />
+
+          <IndividualKurta
+            id={routeProps.match.params.id}
+            setQuantity={setQuantity}
+            quantity={quantity}
+            handleMedium={handleMedium}
+            handleLarge={handleLarge}
+            handleSmall={handleSmall}
+            isSmall={isSmall}
+            isLarge={isLarge}
+            isMedium={isMedium}
+          />
+
         )}
       />
       <Route
         exact
         path="/men/pants/:id"
         render={(routeProps) => (
-          <IndividualPant id={routeProps.match.params.id} />
+
+       
+          <IndividualPant
+            id={routeProps.match.params.id}
+            setQuantity={setQuantity}
+            quantity={quantity}
+            handleMedium={handleMedium}
+            handleLarge={handleLarge}
+            handleSmall={handleSmall}
+            isSmall={isSmall}
+            isLarge={isLarge}
+            isMedium={isMedium}
+          />
+
         )}
       />
       <Route
         exact
         path="/accessories/:id"
         render={(routeProps) => (
-          <IndividualAcc id={routeProps.match.params.id} />
+
+          <IndividualAcc
+            id={routeProps.match.params.id}
+            setQuantity={setQuantity}
+            quantity={quantity}
+            handleMedium={handleMedium}
+            handleLarge={handleLarge}
+            handleSmall={handleSmall}
+            isSmall={isSmall}
+            isLarge={isLarge}
+            isMedium={isMedium}
+          />
+
         )}
       />
 
