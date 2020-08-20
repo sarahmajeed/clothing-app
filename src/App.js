@@ -41,7 +41,7 @@ function App() {
   };
 
   const handleBuyNow = (history) => {
-    history.push("/billingform");
+    return history.push("/billingform");
   };
 
   const handleSmall = () => {
@@ -98,9 +98,7 @@ function App() {
       <Route
         exact
         path="/women/kurtis"
-        render={(routeProps) => (
-          <WomenKurtis routeProps={routeProps} handleBuyNow={handleBuyNow} />
-        )}
+        render={(routeProps) => <WomenKurtis />}
       />
       <Route exact path="/women/trousers" render={() => <WomenTrousers />} />
       <Route exact path="/men/pants" render={() => <MenPants />} />
@@ -123,6 +121,8 @@ function App() {
             isSmall={isSmall}
             isLarge={isLarge}
             isMedium={isMedium}
+            history={routeProps.history}
+            handleBuyNow={handleBuyNow}
           />
         )}
       />

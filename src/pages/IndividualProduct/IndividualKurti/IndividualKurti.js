@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function IndividualKurti({
   id,
-  routeProps,
+  history,
   handleLarge,
   handleSmall,
   handleMedium,
@@ -145,10 +145,7 @@ function IndividualKurti({
                   </div>
                 </div>
                 <div className="product-checkout-actions">
-                  <button
-                    onClick={() => handleBuyNow(routeProps.history)}
-                    className="btn"
-                  >
+                  <button onClick={() => handleBuyNow(history)} className="btn">
                     Buy now
                   </button>
                 </div>
