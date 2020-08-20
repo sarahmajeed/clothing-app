@@ -14,6 +14,8 @@ function IndividualKurti({
   quantity,
   setQuantity,
   handleBuyNow,
+  kurtiPrice,
+  setKurtiPrice,
 }) {
   const [indKurti, setIndKurti] = useState([]);
 
@@ -33,14 +35,17 @@ function IndividualKurti({
     if (isSmall === true) {
       if (quantity < indKurti.smallquantity) {
         setQuantity(quantity + 1);
+        setKurtiPrice(parseInt(kurtiPrice) + parseInt(indKurti.kurtiprice));
       }
     } else if (isMedium === true) {
       if (quantity < indKurti.mediumquantity) {
         setQuantity(quantity + 1);
+        setKurtiPrice(parseInt(kurtiPrice) + parseInt(indKurti.kurtiprice));
       }
     } else if (isLarge === true) {
       if (quantity < indKurti.largequantity) {
         setQuantity(quantity + 1);
+        setKurtiPrice(parseInt(kurtiPrice) + parseInt(indKurti.kurtiprice));
       }
     } else {
       const hidden = document.querySelector(".hid");
@@ -51,6 +56,7 @@ function IndividualKurti({
   const handleLeft = () => {
     if (quantity > 0) {
       setQuantity(quantity - 1);
+      setKurtiPrice(parseInt(kurtiPrice) - parseInt(indKurti.kurtiprice));
     } else {
       setQuantity(0);
     }
@@ -141,7 +147,9 @@ function IndividualKurti({
                   Total Price
                   <div className="product-checkout-total">
                     <i className="fa fa-usd"></i>
-                    <div className="product-checkout-total-amount">0.00</div>
+                    <div className="product-checkout-total-amount">
+                      {kurtiPrice}
+                    </div>
                   </div>
                 </div>
                 <div className="product-checkout-actions">

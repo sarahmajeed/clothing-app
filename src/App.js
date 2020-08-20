@@ -31,6 +31,7 @@ function App() {
   const [email, setEmail] = useState("");
   const [joined, setJoined] = useState("");
   const [isLoggedIn, setisLoggedIn] = useState(false);
+  const [kurtiPrice, setKurtiPrice] = useState(0);
 
   const loadUser = (data) => {
     setId(data.id);
@@ -123,6 +124,8 @@ function App() {
             isMedium={isMedium}
             history={routeProps.history}
             handleBuyNow={handleBuyNow}
+            kurtiPrice={kurtiPrice}
+            setKurtiPrice={setKurtiPrice}
           />
         )}
       />
@@ -140,6 +143,8 @@ function App() {
             isSmall={isSmall}
             isLarge={isLarge}
             isMedium={isMedium}
+            history={routeProps.history}
+            handleBuyNow={handleBuyNow}
           />
         )}
       />

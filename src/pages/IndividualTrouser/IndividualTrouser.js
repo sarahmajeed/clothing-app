@@ -4,7 +4,8 @@ import { useState } from "react";
 
 function IndividualTrouser({
   id,
-
+  handleBuyNow,
+  history,
   handleLarge,
   handleSmall,
   handleMedium,
@@ -141,7 +142,9 @@ function IndividualTrouser({
                   </div>
                 </div>
                 <div className="product-checkout-actions">
-                  <button className="btn">Add to Cart</button>
+                  <button onClick={() => handleBuyNow(history)} className="btn">
+                    Buy Now
+                  </button>
                 </div>
               </div>
             </div>
