@@ -139,7 +139,7 @@ function IndividualKurta({
                   </div>
                 </div>
                 <div className="product-checkout-actions">
-                  <button className="btn">Add to Cart</button>
+                  <button className="btn">Buy now</button>
                 </div>
               </div>
             </div>

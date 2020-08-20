@@ -40,6 +40,10 @@ function App() {
     setisLoggedIn(true);
   };
 
+  const handleBuyNow = (history) => {
+    history.push("/billingform");
+  };
+
   const handleSmall = () => {
     const hidden = document.querySelector(".hid");
     hidden.classList.remove("visible");
@@ -91,7 +95,13 @@ function App() {
       />
 
       <Route exact path="/about" render={() => <About />} />
-      <Route exact path="/women/kurtis" render={() => <WomenKurtis />} />
+      <Route
+        exact
+        path="/women/kurtis"
+        render={(routeProps) => (
+          <WomenKurtis routeProps={routeProps} handleBuyNow={handleBuyNow} />
+        )}
+      />
       <Route exact path="/women/trousers" render={() => <WomenTrousers />} />
       <Route exact path="/men/pants" render={() => <MenPants />} />
       <Route exact path="/men/shirts" render={() => <MenShirts />} />

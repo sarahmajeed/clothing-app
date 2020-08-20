@@ -1,14 +1,27 @@
-
 body {
   margin: 0;
   font-family: AvenirLTStd-Medium, Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-   height: 100vh;
- 
+  height: 100vh;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.btn {
+  text-transform: uppercase;
+  background-color: #000000;
+  color: #ffffff;
+  width: 100px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
 }
