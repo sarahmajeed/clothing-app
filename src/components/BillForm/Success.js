@@ -5,7 +5,7 @@ export class Success extends Component {
   render() {
     //const { value } = this.props;
     return (
-      <div className="card">
+      <div className="card-success">
         <div className="icon">
           <i className="checkmark">✓</i>
         </div>

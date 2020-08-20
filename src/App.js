@@ -11,6 +11,7 @@ import MenShirts from "./components/MenShirts/MenShirts";
 import MenKurta from "./components/MenKurta/MenKurta";
 import Accessories from "./components/Accessories/Accessories";
 import About from "./pages/About/About";
+import AuthNavbar from "./components/AuthNavbar/AuthNavbar";
 import Navbar from "./components/Navbar/Navbar";
 import { useState } from "react";
 import IndividualKurti from "./pages/IndividualProduct/IndividualKurti/IndividualKurti";
@@ -29,12 +30,14 @@ function App() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [joined, setJoined] = useState("");
+  const [isLoggedIn, setisLoggedIn] = useState(false);
 
   const loadUser = (data) => {
     setId(data.id);
     setName(data.name);
     setEmail(data.email);
     setJoined(data.joined);
+    setisLoggedIn(true);
   };
 
   const handleSmall = () => {
@@ -65,13 +68,12 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      {isLoggedIn ? <AuthNavbar /> : <Navbar />}
+
       {/* importing homepage route */}
       <Route exact path="/" render={() => <HomePage />} />
 
       <Route exact path="/billingform" render={() => <UserForm />} />
-     
-
 
       <Route
         exact
@@ -99,7 +101,6 @@ function App() {
         exact
         path="/women/kurtis/:id"
         render={(routeProps) => (
-
           <IndividualKurti
             id={routeProps.match.params.id}
             // handleRight={handleRight}
@@ -113,14 +114,12 @@ function App() {
             isLarge={isLarge}
             isMedium={isMedium}
           />
-
         )}
       />
       <Route
         exact
         path="/women/trousers/:id"
         render={(routeProps) => (
-
           <IndividualTrouser
             id={routeProps.match.params.id}
             setQuantity={setQuantity}
@@ -132,14 +131,12 @@ function App() {
             isLarge={isLarge}
             isMedium={isMedium}
           />
-
         )}
       />
       <Route
         exact
         path="/men/shirts/:id"
         render={(routeProps) => (
-=
           <IndividualShirt
             id={routeProps.match.params.id}
             setQuantity={setQuantity}
@@ -151,14 +148,12 @@ function App() {
             isLarge={isLarge}
             isMedium={isMedium}
           />
-
         )}
       />
       <Route
         exact
         path="/men/kurta/:id"
         render={(routeProps) => (
-
           <IndividualKurta
             id={routeProps.match.params.id}
             setQuantity={setQuantity}
@@ -170,15 +165,12 @@ function App() {
             isLarge={isLarge}
             isMedium={isMedium}
           />
-
         )}
       />
       <Route
         exact
         path="/men/pants/:id"
         render={(routeProps) => (
-
-       
           <IndividualPant
             id={routeProps.match.params.id}
             setQuantity={setQuantity}
@@ -190,14 +182,12 @@ function App() {
             isLarge={isLarge}
             isMedium={isMedium}
           />
-
         )}
       />
       <Route
         exact
         path="/accessories/:id"
         render={(routeProps) => (
-
           <IndividualAcc
             id={routeProps.match.params.id}
             setQuantity={setQuantity}
@@ -209,7 +199,6 @@ function App() {
             isLarge={isLarge}
             isMedium={isMedium}
           />
-
         )}
       />
 
