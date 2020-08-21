@@ -134,8 +134,10 @@ input[type="button"] {
   color: #222;
   width: 0;
   height: 0;
-  border-top: 60px solid #cae00d;
+
+  border-top: 60px solid #e0eeef;
   border-right: 60px solid transparent;
+  cursor: pointer;
 }
 
 .go-back i {

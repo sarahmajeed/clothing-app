@@ -35,6 +35,7 @@ function App() {
   const [joined, setJoined] = useState("");
   const [isLoggedIn, setisLoggedIn] = useState(false);
   const [kurtiPrice, setKurtiPrice] = useState(0);
+  const [trouserPrice, setTrouserPrice] = useState(0);
 
   const loadUser = (data) => {
     setId(data.id);
@@ -152,6 +153,8 @@ function App() {
             isMedium={isMedium}
             history={routeProps.history}
             handleBuyNow={handleBuyNow}
+            trouserPrice={trouserPrice}
+            setTrouserPrice={setTrouserPrice}
           />
         )}
       />
@@ -223,7 +226,7 @@ function App() {
           />
         )}
       />
-      <Route exact path="/bill" render={() => <Bill />} />
+      <Route exact path="/bill" render={() => <Bill quantity={quantity} />} />
 
       {/* Footer */}
       <footer className="footer">

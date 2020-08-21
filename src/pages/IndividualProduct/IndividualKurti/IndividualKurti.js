@@ -16,6 +16,7 @@ function IndividualKurti({
   handleBuyNow,
   kurtiPrice,
   setKurtiPrice,
+  handleBack,
 }) {
   const [indKurti, setIndKurti] = useState([]);
 
@@ -30,6 +31,10 @@ function IndividualKurti({
         setIndKurti(res[0]);
       });
   }, [id]);
+
+  const handleKurtiBack = (history) => {
+    return history.push("/women/kurtis");
+  };
 
   const handleRight = () => {
     if (isSmall === true) {
@@ -68,7 +73,7 @@ function IndividualKurti({
       <div classNameName="pop-up-container">
         <div className="pop-up-container-vertical">
           <div className="pop-up-wrapper">
-            <div className="go-back">
+            <div onClick={() => handleKurtiBack(history)} className="go-back">
               <i className="fa fa-arrow-left"></i>
             </div>
             <div className="product-details">

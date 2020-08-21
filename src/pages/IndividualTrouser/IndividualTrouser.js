@@ -14,6 +14,8 @@ function IndividualTrouser({
   isMedium,
   quantity,
   setQuantity,
+  trouserPrice,
+  setTrouserPrice,
 }) {
   const [indTrouser, setIndTrouser] = useState([]);
   useEffect(() => {
@@ -31,14 +33,23 @@ function IndividualTrouser({
     if (isSmall === true) {
       if (quantity < indTrouser.smallquantity) {
         setQuantity(quantity + 1);
+        setTrouserPrice(
+          parseInt(trouserPrice) + parseInt(indTrouser.trouserprice)
+        );
       }
     } else if (isMedium === true) {
       if (quantity < indTrouser.mediumquantity) {
         setQuantity(quantity + 1);
+        setTrouserPrice(
+          parseInt(trouserPrice) + parseInt(indTrouser.trouserprice)
+        );
       }
     } else if (isLarge === true) {
       if (quantity < indTrouser.largequantity) {
         setQuantity(quantity + 1);
+        setTrouserPrice(
+          parseInt(trouserPrice) + parseInt(indTrouser.trouserprice)
+        );
       }
     } else {
       const hidden = document.querySelector(".hid");
@@ -46,13 +57,20 @@ function IndividualTrouser({
     }
     console.log("handle right working");
   };
+
   const handleLeft = () => {
     if (quantity > 0) {
       setQuantity(quantity - 1);
+      setTrouserPrice(
+        parseInt(trouserPrice) - parseInt(indTrouser.trouserprice)
+      );
     } else {
       setQuantity(0);
     }
     console.log("handle Left working");
+  };
+  const handleTrouserBack = (history) => {
+    return history.push("/women/trousers");
   };
   return (
     <div className="lightbox-blanket">
@@ -60,7 +78,10 @@ function IndividualTrouser({
         <div className="pop-up-container-vertical">
           <div className="pop-up-wrapper">
             <div className="go-back">
-              <i className="fa fa-arrow-left"></i>
+              <i
+                onClick={() => handleTrouserBack(history)}
+                className="fa fa-arrow-left"
+              ></i>
             </div>
             <div className="product-details">
               <div className="product-left">
@@ -138,7 +159,9 @@ function IndividualTrouser({
                   Total Price
                   <div className="product-checkout-total">
                     <i className="fa fa-usd"></i>
-                    <div className="product-checkout-total-amount">0.00</div>
+                    <div className="product-checkout-total-amount">
+                      {trouserPrice}
+                    </div>
                   </div>
                 </div>
                 <div className="product-checkout-actions">
