@@ -42,7 +42,11 @@ function App() {
   };
 
   const handleBuyNow = (history) => {
-    return history.push("/billingform");
+    if (kurtiPrice === 0) {
+      return alert("select an item to buy");
+    } else if (kurtiPrice !== 0) {
+      return history.push("/billingform");
+    }
   };
 
   const handleSmall = () => {
