@@ -29,7 +29,7 @@ class Signup extends Component {
       .then((res) => res.json())
       .then((user) => {
         if (user) {
-          this.props.routeProps.history.push("/facedetect");
+          this.props.routeProps.history.push("/");
           this.props.loadUser(user);
           console.log(user);
         }

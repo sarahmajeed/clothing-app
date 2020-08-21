@@ -32,9 +32,9 @@ class Signin extends Component {
       .then((res) => res.json())
       .then((user) => {
         console.log(user);
-        if (user.id) {
+        if (user) {
           this.props.loadUser(user);
-          this.props.routeProps.history.push("/facedetect");
+          this.props.routeProps.history.push("/");
         }
       });
   };
