@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.scss";
+
 import { Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import Signup from "./components/Signup/Signup";
@@ -21,6 +22,8 @@ import IndividualKurta from "./pages/IndividualKurta/IndividualKurta";
 import IndividualPant from "./pages/IndividualPant/IndividualPant";
 import IndividualAcc from "./pages/IndividualAcc/IndividualAcc";
 import UserForm from "./components/BillForm/UserForm";
+import Bill from "./components/billreceipt/billreceipt";
+
 function App() {
   const [quantity, setQuantity] = useState(0);
   const [isSmall, setIsSmall] = useState(false);
@@ -220,6 +223,7 @@ function App() {
           />
         )}
       />
+      <Route exact path="/bill" render={() => <Bill />} />
 
       {/* Footer */}
       <footer className="footer">
