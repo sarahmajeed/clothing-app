@@ -12,6 +12,10 @@ function IndividualShirt({
   isLarge,
   isMedium,
   quantity,
+  history,
+  handleBuyNow,
+  setShirtPrice,
+  shirtPrice,
 }) {
   const [indShirt, setIndShirt] = useState([]);
   useEffect(() => {
@@ -29,14 +33,17 @@ function IndividualShirt({
     if (isSmall === true) {
       if (quantity < indShirt.smallquantity) {
         setQuantity(quantity + 1);
+        setShirtPrice(parseInt(shirtPrice) + parseInt(indShirt.shirtprice));
       }
     } else if (isMedium === true) {
       if (quantity < indShirt.mediumquantity) {
         setQuantity(quantity + 1);
+        setShirtPrice(parseInt(shirtPrice) + parseInt(indShirt.shirtprice));
       }
     } else if (isLarge === true) {
       if (quantity < indShirt.largequantity) {
         setQuantity(quantity + 1);
+        setShirtPrice(parseInt(shirtPrice) + parseInt(indShirt.shirtprice));
       }
     } else {
       const hidden = document.querySelector(".hid");
@@ -47,18 +54,27 @@ function IndividualShirt({
   const handleLeft = () => {
     if (quantity > 0) {
       setQuantity(quantity - 1);
+      setShirtPrice(parseInt(shirtPrice) + parseInt(indShirt.shirtprice));
     } else {
       setQuantity(0);
     }
     console.log("handle Left working");
   };
+
+  const handleShirtBack = (history) => {
+    return history.push("/men/shirts");
+  };
+
   return (
     <div className="lightbox-blanket">
       <div classNameName="pop-up-container">
         <div className="pop-up-container-vertical">
           <div className="pop-up-wrapper">
             <div className="go-back">
-              <i className="fa fa-arrow-left"></i>
+              <i
+                onClick={() => handleShirtBack(history)}
+                className="fa fa-arrow-left"
+              ></i>
             </div>
             <div className="product-details">
               <div className="product-left">
@@ -135,11 +151,15 @@ function IndividualShirt({
                   Total Price
                   <div className="product-checkout-total">
                     <i className="fa fa-usd"></i>
-                    <div className="product-checkout-total-amount">0.00</div>
+                    <div className="product-checkout-total-amount">
+                      {shirtPrice}
+                    </div>
                   </div>
                 </div>
                 <div className="product-checkout-actions">
-                  <button className="btn">Add to Cart</button>
+                  <button onClick={() => handleBuyNow(history)} className="btn">
+                    buy now
+                  </button>
                 </div>
               </div>
             </div>

@@ -37,6 +37,9 @@ function App() {
   const [kurtiPrice, setKurtiPrice] = useState(0);
   const [trouserPrice, setTrouserPrice] = useState(0);
   const [kurtaPrice, setKurtaPrice] = useState(0);
+  const [shirtPrice, setShirtPrice] = useState(0);
+  const [pantPrice, setPantPrice] = useState(0);
+  const [accPrice, setAccPrice] = useState(0);
 
   const loadUser = (data) => {
     setId(data.id);
@@ -47,9 +50,23 @@ function App() {
   };
 
   const handleBuyNow = (history) => {
-    if (kurtiPrice === 0) {
+    if (
+      kurtiPrice === 0 &&
+      trouserPrice === 0 &&
+      kurtaPrice === 0 &&
+      shirtPrice === 0 &&
+      pantPrice === 0 &&
+      accPrice === 0
+    ) {
       return alert("select an item to buy");
-    } else if (kurtiPrice !== 0) {
+    } else if (
+      kurtiPrice !== 0 ||
+      trouserPrice !== 0 ||
+      kurtaPrice !== 0 ||
+      shirtPrice !== 0 ||
+      pantPrice !== 0 ||
+      accPrice !== 0
+    ) {
       return history.push("/billingform");
     }
   };
@@ -172,7 +189,11 @@ function App() {
             handleSmall={handleSmall}
             isSmall={isSmall}
             isLarge={isLarge}
+            history={routeProps.history}
+            handleBuyNow={handleBuyNow}
             isMedium={isMedium}
+            shirtPrice={shirtPrice}
+            setShirtPrice={setShirtPrice}
           />
         )}
       />
@@ -190,8 +211,8 @@ function App() {
             isSmall={isSmall}
             isLarge={isLarge}
             isMedium={isMedium}
-            kurtaPrice={kurtiPrice}
-            setKurtaPrice={setKurtiPrice}
+            kurtaPrice={kurtaPrice}
+            setKurtaPrice={setKurtaPrice}
             history={routeProps.history}
             handleBuyNow={handleBuyNow}
           />
@@ -211,6 +232,10 @@ function App() {
             isSmall={isSmall}
             isLarge={isLarge}
             isMedium={isMedium}
+            history={routeProps.history}
+            handleBuyNow={handleBuyNow}
+            pantPrice={pantPrice}
+            setPantPrice={setPantPrice}
           />
         )}
       />
@@ -228,6 +253,10 @@ function App() {
             isSmall={isSmall}
             isLarge={isLarge}
             isMedium={isMedium}
+            history={routeProps.history}
+            handleBuyNow={handleBuyNow}
+            accPrice={accPrice}
+            setAccPrice={setAccPrice}
           />
         )}
       />
