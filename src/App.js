@@ -36,6 +36,7 @@ function App() {
   const [isLoggedIn, setisLoggedIn] = useState(false);
   const [kurtiPrice, setKurtiPrice] = useState(0);
   const [trouserPrice, setTrouserPrice] = useState(0);
+  const [kurtaPrice, setKurtaPrice] = useState(0);
 
   const loadUser = (data) => {
     setId(data.id);
@@ -189,6 +190,10 @@ function App() {
             isSmall={isSmall}
             isLarge={isLarge}
             isMedium={isMedium}
+            kurtaPrice={kurtiPrice}
+            setKurtaPrice={setKurtiPrice}
+            history={routeProps.history}
+            handleBuyNow={handleBuyNow}
           />
         )}
       />

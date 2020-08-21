@@ -4,6 +4,7 @@ import { useState } from "react";
 
 function IndividualKurta({
   id,
+  history,
   setQuantity,
   handleLarge,
   handleSmall,
@@ -12,6 +13,9 @@ function IndividualKurta({
   isLarge,
   isMedium,
   quantity,
+  handleBuyNow,
+  kurtaPrice,
+  setKurtaPrice,
 }) {
   const [indKurta, setIndKurta] = useState([]);
   useEffect(() => {
@@ -29,14 +33,17 @@ function IndividualKurta({
     if (isSmall === true) {
       if (quantity < indKurta.smallquantity) {
         setQuantity(quantity + 1);
+        setKurtaPrice(parseInt(kurtaPrice) + parseInt(indKurta.kurtaprice));
       }
     } else if (isMedium === true) {
       if (quantity < indKurta.mediumquantity) {
         setQuantity(quantity + 1);
+        setKurtaPrice(parseInt(kurtaPrice) + parseInt(indKurta.kurtaprice));
       }
     } else if (isLarge === true) {
       if (quantity < indKurta.largequantity) {
         setQuantity(quantity + 1);
+        setKurtaPrice(parseInt(kurtaPrice) + parseInt(indKurta.kurtaprice));
       }
     } else {
       const hidden = document.querySelector(".hid");
@@ -47,10 +54,14 @@ function IndividualKurta({
   const handleLeft = () => {
     if (quantity > 0) {
       setQuantity(quantity - 1);
+      setKurtaPrice(parseInt(kurtaPrice) + parseInt(indKurta.kurtaprice));
     } else {
       setQuantity(0);
     }
     console.log("handle Left working");
+  };
+  const handleKurtaBack = (history) => {
+    return history.push("/men/kurta");
   };
   return (
     <div className="lightbox-blanket">
@@ -58,7 +69,10 @@ function IndividualKurta({
         <div className="pop-up-container-vertical">
           <div className="pop-up-wrapper">
             <div className="go-back">
-              <i className="fa fa-arrow-left"></i>
+              <i
+                onClick={() => handleKurtaBack(history)}
+                className="fa fa-arrow-left"
+              ></i>
             </div>
             <div className="product-details">
               <div className="product-left">
@@ -135,11 +149,15 @@ function IndividualKurta({
                   Total Price
                   <div className="product-checkout-total">
                     <i className="fa fa-usd"></i>
-                    <div className="product-checkout-total-amount">0.00</div>
+                    <div className="product-checkout-total-amount">
+                      {kurtaPrice}
+                    </div>
                   </div>
                 </div>
                 <div className="product-checkout-actions">
-                  <button className="btn">Buy now</button>
+                  <button onClick={() => handleBuyNow(history)} className="btn">
+                    Buy now
+                  </button>
                 </div>
               </div>
             </div>
