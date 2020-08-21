@@ -70,6 +70,8 @@ function IndividualTrouser({
     console.log("handle Left working");
   };
   const handleTrouserBack = (history) => {
+    setQuantity(0);
+    setTrouserPrice(0);
     return history.push("/women/trousers");
   };
   return (

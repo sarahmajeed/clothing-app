@@ -61,6 +61,8 @@ function IndividualAcc({
     console.log("handle Left working");
   };
   const handleAccBack = (history) => {
+    setQuantity(0);
+    setAccPrice(0);
     return history.push("/accessories");
   };
   return (

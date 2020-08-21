@@ -82,11 +82,11 @@ const AuthNavbar = () => {
       </ul>
 
       <ul className="icons">
-        <li>
+        {/* <li>
           <a href="/signin">
             <i className="fa fa-user-circle"></i>
           </a>
-        </li>
+        </li> */}
         <li>
           <a href="/">
             <i className="fa fa-sign-out"></i>

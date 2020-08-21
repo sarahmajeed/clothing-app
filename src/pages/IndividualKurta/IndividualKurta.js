@@ -61,6 +61,8 @@ function IndividualKurta({
     console.log("handle Left working");
   };
   const handleKurtaBack = (history) => {
+    setQuantity(0);
+    setKurtaPrice(0);
     return history.push("/men/kurta");
   };
   return (

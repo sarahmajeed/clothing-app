@@ -33,6 +33,8 @@ function IndividualKurti({
   }, [id]);
 
   const handleKurtiBack = (history) => {
+    setKurtiPrice(0);
+    setQuantity(0);
     return history.push("/women/kurtis");
   };
 

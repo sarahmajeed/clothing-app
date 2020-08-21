@@ -61,6 +61,8 @@ function IndividualPant({
     console.log("handle Left working");
   };
   const handlePantBack = (history) => {
+    setQuantity(0);
+    setPantPrice(0);
     return history.push("/men/pants");
   };
   return (

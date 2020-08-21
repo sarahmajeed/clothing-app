@@ -62,6 +62,8 @@ function IndividualShirt({
   };
 
   const handleShirtBack = (history) => {
+    setQuantity(0);
+    setShirtPrice(0);
     return history.push("/men/shirts");
   };
 
