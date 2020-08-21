@@ -12,6 +12,10 @@ function IndividualAcc({
   isLarge,
   isMedium,
   quantity,
+  handleBuyNow,
+  accPrice,
+  setAccPrice,
+  history,
 }) {
   const [indAcc, setIndAcc] = useState([]);
   useEffect(() => {
@@ -29,14 +33,17 @@ function IndividualAcc({
     if (isSmall === true) {
       if (quantity < indAcc.smallquantity) {
         setQuantity(quantity + 1);
+        setAccPrice(parseInt(accPrice) + parseInt(indAcc.accprice));
       }
     } else if (isMedium === true) {
       if (quantity < indAcc.mediumquantity) {
         setQuantity(quantity + 1);
+        setAccPrice(parseInt(accPrice) + parseInt(indAcc.accprice));
       }
     } else if (isLarge === true) {
       if (quantity < indAcc.largequantity) {
         setQuantity(quantity + 1);
+        setAccPrice(parseInt(accPrice) + parseInt(indAcc.accprice));
       }
     } else {
       const hidden = document.querySelector(".hid");
@@ -47,10 +54,14 @@ function IndividualAcc({
   const handleLeft = () => {
     if (quantity > 0) {
       setQuantity(quantity - 1);
+      setAccPrice(parseInt(accPrice) - parseInt(indAcc.accprice));
     } else {
       setQuantity(0);
     }
     console.log("handle Left working");
+  };
+  const handleAccBack = (history) => {
+    return history.push("/accessories");
   };
   return (
     <div className="lightbox-blanket">
@@ -58,7 +69,10 @@ function IndividualAcc({
         <div className="pop-up-container-vertical">
           <div className="pop-up-wrapper">
             <div className="go-back">
-              <i className="fa fa-arrow-left"></i>
+              <i
+                onClick={() => handleAccBack(history)}
+                className="fa fa-arrow-left"
+              ></i>
             </div>
             <div className="product-details">
               <div className="product-left">
@@ -131,11 +145,15 @@ function IndividualAcc({
                   Total Price
                   <div className="product-checkout-total">
                     <i className="fa fa-usd"></i>
-                    <div className="product-checkout-total-amount">0.00</div>
+                    <div className="product-checkout-total-amount">
+                      {accPrice}
+                    </div>
                   </div>
                 </div>
                 <div className="product-checkout-actions">
-                  <button className="btn">Add to Cart</button>
+                  <button onClick={() => handleBuyNow(history)} className="btn">
+                    buy now
+                  </button>
                 </div>
               </div>
             </div>
