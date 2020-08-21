@@ -54,7 +54,7 @@ function IndividualShirt({
   const handleLeft = () => {
     if (quantity > 0) {
       setQuantity(quantity - 1);
-      setShirtPrice(parseInt(shirtPrice) + parseInt(indShirt.shirtprice));
+      setShirtPrice(parseInt(shirtPrice) - parseInt(indShirt.shirtprice));
     } else {
       setQuantity(0);
     }
