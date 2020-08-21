@@ -3,18 +3,22 @@ import jspdf from "jspdf";
 
 function billreceipt() {
   const jsPDFGnerator = () => {
+    let today = new Date();
+    let date =
+      today.getDate() + "-" + today.getMonth() + "-" + today.getFullYear();
     // new document
-    var doc = new jspdf("p", "pt");
+    let doc = new jspdf("p", "pt");
 
-    doc.text(20, 20, "This is default text");
+    doc.text(200, 50, "ELEGANT CLOTHING RECEIPT");
 
-    doc.setFont("courier");
+    doc.setFont("arial");
 
     // doc.setFontType("normal");
+    doc.text(400, 100, `Date: ${date}`);
 
-    doc.text(20, 30, "This is text with font");
+    doc.text(100, 120, "Name: Sarah Majeed");
 
-    doc.save("generated.pdf");
+    doc.save("Receipt.pdf");
   };
   return (
     <div>
