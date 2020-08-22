@@ -19,7 +19,7 @@ export class Success extends Component {
     // doc.setFontType("normal");
     doc.text(400, 100, `Date: ${date}`);
 
-    doc.text(100, 150, "Name: Sarah Majeed");
+    doc.text(100, 150, `Name: ${this.props.value.Name}`);
     doc.text(100, 190, `Card Number: ${this.props.value.CardNumber}`);
     doc.text(100, 230, `Address:${this.props.value.Address}`);
 
