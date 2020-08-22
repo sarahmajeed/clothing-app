@@ -27,7 +27,7 @@ export class FormPersonalDetails extends Component {
               name="Name"
               type="text"
               value={value.Name}
-              onChange={handleChange("Name")}
+              onChange={handleChange()}
               placeholder="Name"
               className="input"
               required
@@ -46,7 +46,7 @@ export class FormPersonalDetails extends Component {
               name="email"
               type="email"
               value={value.Email}
-              onChange={handleChange("Email")}
+              onChange={handleChange()}
               placeholder="Email"
               className="input"
               required
@@ -64,7 +64,7 @@ export class FormPersonalDetails extends Component {
               name="Address"
               type="Text"
               value={value.Address}
-              onChange={handleChange("Address")}
+              onChange={handleChange()}
               placeholder="Address"
               className="input"
               required
@@ -80,7 +80,7 @@ export class FormPersonalDetails extends Component {
               name="City"
               type="Text"
               value={value.City}
-              onChange={handleChange("City")}
+              onChange={handleChange()}
               placeholder="City"
               className="input"
               required
@@ -98,7 +98,7 @@ export class FormPersonalDetails extends Component {
               name="Phone Number"
               type="tel"
               value={value.PhoneNumber}
-              onChange={handleChange("PhoneNumber")}
+              onChange={handleChange()}
               placeholder="+923001234567"
               className="input"
               maxlength="13"
