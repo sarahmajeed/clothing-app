@@ -20,7 +20,7 @@ function IndividualTrouser({
   const [indTrouser, setIndTrouser] = useState([]);
   useEffect(() => {
     fetch(
-      `http://ec2-15-206-93-116.ap-south-1.compute.amazonaws.com:5000//women/trousers/${id}`,
+      `http://ec2-15-206-93-116.ap-south-1.compute.amazonaws.com:5000/women/trousers/${id}`,
       {
         method: "get",
         headers: { "Content-Type": "application/json" },
