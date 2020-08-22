@@ -31,7 +31,7 @@ export class FormBillingDetails extends Component {
               name="CardNumber"
               type="text"
               value={value.CardNumber}
-              onChange={handleChange()}
+              onChange={handleChange("CardNumber")}
               placeholder="Enter 15 digit Card Number"
               className="input"
               maxlength="15"
