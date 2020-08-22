@@ -84,7 +84,19 @@ export class UserForm extends Component {
           />
         );
       case 4:
-        return <Success value={value} />;
+        return (
+          <Success
+            kurtiPrice={this.props.kurtiPrice}
+            kurtaPrice={this.props.kurtaPrice}
+            shirtPrice={this.props.shirtPrice}
+            pantPrice={this.props.pantPrice}
+            accPrice={this.props.accPrice}
+            quantity={this.props.quantity}
+            generateTotalPrice={this.props.generateTotalPrice}
+            totalPrice={this.props.totalPrice}
+            value={value}
+          />
+        );
       default:
         return <h1>Error</h1>;
     }

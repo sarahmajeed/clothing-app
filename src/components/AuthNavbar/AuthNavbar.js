@@ -1,5 +1,6 @@
 import React from "react";
 import "../Navbar/Navbar.scss";
+import { Link } from "react-router-dom";
 
 const navSlide = function navSlide() {
   const bar = document.querySelector(".bar");
@@ -31,10 +32,10 @@ const AuthNavbar = () => {
       </div>
       <div className="logo">
         <h4>
-          <a href="/">
+          <Link to="/">
             <span className="e">Ǝ</span>
             <span>CLOTHING</span>
-          </a>
+          </Link>
         </h4>
       </div>
 
@@ -45,8 +46,8 @@ const AuthNavbar = () => {
           </a>
           <i className="fa fa-caret-down"></i>
           <div className="dropdown-content">
-            <a href="/women/kurtis">Kurtis</a>
-            <a href="/women/trousers">Trousers</a>
+            <Link to="/women/kurtis">Kurtis</Link>
+            <Link to="/women/trousers">Trousers</Link>
           </div>
         </li>
 
@@ -57,27 +58,22 @@ const AuthNavbar = () => {
             </a>
             <i className="fa fa-caret-down"></i>
             <div className="dropdown-content">
-              <a href="/men/kurta">Kurta</a>
-              <a href="/men/shirts">Shirts</a>
-              <a href="/men/pants">Pants</a>
+              <Link to="/men/kurta">Kurta</Link>
+              <Link to="/men/shirts">Shirts</Link>
+              <Link to="/men/pants">Pants</Link>
             </div>
           </li>
         </div>
 
         <li>
-          <a className="navitem" href="/accessories">
+          <Link className="navitem" to="/accessories">
             ACCESSORIES
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="navitem" href="/about">
+          <Link className="navitem" to="/about">
             ABOUT US
-          </a>
-        </li>
-        <li>
-          <a classNames="navitem" href="/contact">
-            CONTACT US
-          </a>
+          </Link>
         </li>
       </ul>
 
@@ -88,9 +84,9 @@ const AuthNavbar = () => {
           </a>
         </li> */}
         <li>
-          <a href="/">
+          <Link to="/">
             <i className="fa fa-sign-out"></i>
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

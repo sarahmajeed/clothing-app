@@ -22,9 +22,9 @@ export class Success extends Component {
     doc.text(100, 150, "Name: Sarah Majeed");
     doc.text(100, 190, `Card Number: ${this.props.value.CardNumber}`);
     doc.text(100, 230, `Address:${this.props.value.Address}`);
-    doc.text(100, 270, "Name of item bought:");
-    doc.text(100, 310, "Quantity:");
-    doc.text(100, 350, "Total Price:");
+
+    doc.text(100, 310, `Quantity: ${this.props.quantity}`);
+    doc.text(100, 350, `Total Price: ${this.props.totalPrice}`);
 
     doc.save("Receipt.pdf");
   };

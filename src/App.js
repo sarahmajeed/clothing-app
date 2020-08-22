@@ -40,6 +40,22 @@ function App() {
   const [shirtPrice, setShirtPrice] = useState(0);
   const [pantPrice, setPantPrice] = useState(0);
   const [accPrice, setAccPrice] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  const generateTotalPrice = () => {
+    if (kurtiPrice !== 0) {
+      setTotalPrice(kurtiPrice);
+      console.log(totalPrice);
+    } else if (kurtaPrice !== 0) {
+      setTotalPrice(kurtaPrice);
+    } else if (pantPrice !== 0) {
+      setTotalPrice(pantPrice);
+    } else if (shirtPrice !== 0) {
+      setTotalPrice(shirtPrice);
+    } else if (accPrice !== 0) {
+      setTotalPrice(accPrice);
+    }
+  };
 
   const loadUser = (data) => {
     setId(data.id);
@@ -67,6 +83,7 @@ function App() {
       pantPrice !== 0 ||
       accPrice !== 0
     ) {
+      generateTotalPrice();
       return history.push("/billingform");
     }
   };
@@ -104,7 +121,22 @@ function App() {
       {/* importing homepage route */}
       <Route exact path="/" render={() => <HomePage />} />
 
-      <Route exact path="/billingform" render={() => <UserForm />} />
+      <Route
+        exact
+        path="/billingform"
+        render={() => (
+          <UserForm
+            quantity={quantity}
+            generateTotalPrice={generateTotalPrice}
+            totalPrice={totalPrice}
+            kurtiPrice={kurtiPrice}
+            kurtaPrice={kurtaPrice}
+            shirtPrice={shirtPrice}
+            pantPrice={pantPrice}
+            accPrice={accPrice}
+          />
+        )}
+      />
 
       <Route
         exact
@@ -152,6 +184,7 @@ function App() {
             handleBuyNow={handleBuyNow}
             kurtiPrice={kurtiPrice}
             setKurtiPrice={setKurtiPrice}
+            generateTotalPrice={generateTotalPrice}
           />
         )}
       />
@@ -260,7 +293,6 @@ function App() {
           />
         )}
       />
-      <Route exact path="/bill" render={() => <Bill quantity={quantity} />} />
 
       {/* Footer */}
       <footer className="footer">
