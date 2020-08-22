@@ -30,6 +30,7 @@ class Signup extends Component {
       }
     )
       .then((res) => res.json())
+      .then(console.log("working"))
       .then((user) => {
         if (user) {
           this.props.routeProps.history.push("/");
