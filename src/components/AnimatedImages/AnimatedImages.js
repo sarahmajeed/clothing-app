@@ -3,11 +3,12 @@ import "./AnimatedImages.scss";
 
 import box1 from "../../images/3A.jpg";
 import box2 from "../../images/2A.jpg";
+import { Link } from "react-router-dom";
 
 const AnimatedImages = () => {
   return (
     <div className="animated-images-component">
-      <a href="#">
+      <Link to="/women/kurtis">
         <div className="collection-component">
           <div className="imgBox">
             <img src={box1} alt="" />
@@ -18,7 +19,7 @@ const AnimatedImages = () => {
             </div>
           </div>
         </div>
-      </a>
+      </Link>
       <a href="/about">
         <div className="collection-component">
           <div className="imgBox">

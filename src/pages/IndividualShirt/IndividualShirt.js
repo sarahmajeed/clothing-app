@@ -20,7 +20,7 @@ function IndividualShirt({
   const [indShirt, setIndShirt] = useState([]);
   useEffect(() => {
     fetch(
-      `http://ec2-15-206-93-116.ap-south-1.compute.amazonaws.com:5000//men/shirts/${id}`,
+      `http://ec2-15-206-93-116.ap-south-1.compute.amazonaws.com:5000/men/shirts/${id}`,
       {
         method: "get",
         headers: { "Content-Type": "application/json" },

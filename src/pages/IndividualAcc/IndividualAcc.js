@@ -33,22 +33,26 @@ function IndividualAcc({
       });
   }, [id]);
   const handleRight = () => {
-    if (isSmall === true) {
-      if (quantity < indAcc.smallquantity) {
-        setQuantity(quantity + 1);
-        setAccPrice(parseInt(accPrice) + parseInt(indAcc.accprice));
-      }
-    } else if (isMedium === true) {
-      if (quantity < indAcc.mediumquantity) {
-        setQuantity(quantity + 1);
-        setAccPrice(parseInt(accPrice) + parseInt(indAcc.accprice));
-      }
-    } else if (isLarge === true) {
-      if (quantity < indAcc.largequantity) {
-        setQuantity(quantity + 1);
-        setAccPrice(parseInt(accPrice) + parseInt(indAcc.accprice));
-      }
-    } else {
+    if (quantity < indAcc.quantity) {
+      setQuantity(quantity + 1);
+      setAccPrice(parseInt(accPrice) + parseInt(indAcc.accprice));
+    }
+    // if (isSmall === true) {
+    //   if (quantity < indAcc.smallquantity) {
+    //     setQuantity(quantity + 1);
+    //     setAccPrice(parseInt(accPrice) + parseInt(indAcc.accprice));
+    //   }
+    // } else if (isMedium === true) {
+    //   if (quantity < indAcc.mediumquantity) {
+    //     setQuantity(quantity + 1);
+    //     setAccPrice(parseInt(accPrice) + parseInt(indAcc.accprice));
+    //   }
+    // } else if (isLarge === true) {
+    //   if (quantity < indAcc.largequantity) {
+    //     setQuantity(quantity + 1);
+    //     setAccPrice(parseInt(accPrice) + parseInt(indAcc.accprice));
+    //   }
+    else {
       const hidden = document.querySelector(".hid");
       hidden.classList.add("visible");
     }
@@ -96,19 +100,12 @@ function IndividualAcc({
               <div className="product-right">
                 <div className="product-description">{indAcc.description}</div>
                 <div className="product-available">
-                  {isSmall
-                    ? `${indAcc.smallquantity} In stock.`
-                    : isLarge
-                    ? `${indAcc.largequantity} In stock.`
-                    : isMedium
-                    ? `${indAcc.mediumquantity} In stock.`
-                    : null}
-                  {""}
+                  {`${indAcc.quantity} in stock`}
                   <div className="hid">Please Select a size</div>
                 </div>
                 <div className="product-color">
                   <label className="product-color-label">{indAcc.color}</label>
-                  <div className="product-color-shades">
+                  {/* <div className="product-color-shades">
                     <ul>
                       <li onClick={handleSmall} className="red">
                         S
@@ -120,7 +117,7 @@ function IndividualAcc({
                         L
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="product-quantity">
                   <label
