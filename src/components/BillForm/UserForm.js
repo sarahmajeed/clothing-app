@@ -84,7 +84,7 @@ export class UserForm extends Component {
           />
         );
       case 4:
-        return <Success />;
+        return <Success value={value} />;
       default:
         return <h1>Error</h1>;
     }

@@ -79,7 +79,7 @@ const Navbar = () => {
 
       <ul className="icons">
         <li>
-          <Link href="/signin">
+          <Link to="/signin">
             <i className="fa fa-user-circle"></i>
           </Link>
         </li>
