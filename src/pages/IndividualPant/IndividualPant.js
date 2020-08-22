@@ -20,7 +20,7 @@ function IndividualPant({
   const [indPant, setIndPant] = useState([]);
   useEffect(() => {
     fetch(
-      `http://ec2-15-206-93-116.ap-south-1.compute.amazonaws.com:5000/men/pants/${id}`,
+      `http://ec2-15-206-93-116.ap-south-1.compute.amazonaws.com:5000/firebase men/pants/${id}`,
       {
         method: "get",
         headers: { "Content-Type": "application/json" },
