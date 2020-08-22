@@ -19,10 +19,13 @@ function IndividualKurta({
 }) {
   const [indKurta, setIndKurta] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/men/kurta/${id}`, {
-      method: "get",
-      headers: { "Content-Type": "application/json" },
-    })
+    fetch(
+      `http://ec2-15-206-93-116.ap-south-1.compute.amazonaws.com:5000//men/kurta/${id}`,
+      {
+        method: "get",
+        headers: { "Content-Type": "application/json" },
+      }
+    )
       .then((res) => res.json())
       .then((res) => {
         console.log(res);

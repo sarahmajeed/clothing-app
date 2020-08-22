@@ -17,15 +17,18 @@ class Signup extends Component {
 
   handleSignup = (event) => {
     event.preventDefault();
-    fetch("http://localhost:5000/signup", {
-      method: "post",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: this.state.username,
-        email: this.state.email,
-        password: this.state.password,
-      }),
-    })
+    fetch(
+      "http://ec2-15-206-93-116.ap-south-1.compute.amazonaws.com:5000/signup",
+      {
+        method: "post",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: this.state.username,
+          email: this.state.email,
+          password: this.state.password,
+        }),
+      }
+    )
       .then((res) => res.json())
       .then((user) => {
         if (user) {
