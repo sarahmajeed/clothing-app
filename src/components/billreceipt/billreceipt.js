@@ -16,7 +16,7 @@ function billreceipt({ quantity }) {
     // doc.setFontType("normal");
     doc.text(400, 100, `Date: ${date}`);
 
-    doc.text(100, 150, "Name: Sarah Majeed");
+    doc.text(100, 150, "Name:");
     doc.text(100, 190, "Card Number: 29472894923");
     doc.text(100, 230, "Address:");
     doc.text(100, 270, "Name of item bought:");
