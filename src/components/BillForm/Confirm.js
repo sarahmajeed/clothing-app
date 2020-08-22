@@ -2,6 +2,11 @@ import React, { Component } from "react";
 
 import "./Confirm.scss";
 export class Confirm extends Component {
+  constructor() {
+    super();
+
+    this.handleConfirm = this.handleConfirm.bind(this);
+  }
   continue = (e) => {
     e.preventDefault();
     this.props.nextStep();
@@ -10,6 +15,33 @@ export class Confirm extends Component {
     e.preventDefault();
     this.props.prevStep();
   };
+  handleConfirm = (event) => {
+    event.preventDefault();
+    fetch(
+      "http://ec2-15-206-93-116.ap-south-1.compute.amazonaws.com:5000/billingform",
+      {
+        method: "post",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: this.props.value.Name,
+          email: this.props.value.Email,
+          address: this.props.value.Address,
+          contact: this.props.value.PhoneNumber,
+          city: this.props.value.City,
+          card: this.props.value.CardNumber,
+        }),
+      }
+    )
+      .then((res) => res.json())
+      .then((user) => {
+        if (user) {
+          this.props.routeProps.history.push("/");
+          this.props.loadUser(user);
+          console.log(user);
+        }
+      });
+  };
+
   render() {
     //const { value } = this.props;
     return (
