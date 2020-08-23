@@ -97,7 +97,7 @@ function IndividualAcc({
                 </div>
                 <div className="product-description">{indAcc.description}</div>
                 <div className="product-available">
-                  {`${indAcc.quantity} in stock`}
+                  {quantity === 0 ? null : `${indAcc.quantity} in stock`}
                   <div className="hid">Please Select a size</div>
                 </div>
                 <div className="product-color">
