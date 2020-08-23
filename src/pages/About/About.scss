@@ -1,18 +1,20 @@
-@import '../../styles/colors.scss';
-body{
-  overflow-x:hidden ;
+@import "../../styles/colors.scss";
+body {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 .about {
+  .temp {
+    margin: 0;
+  }
   display: flex;
   flex-direction: column;
   position: relative;
- 
-  
+
   align-items: center;
- // background-color: $Black;
-  color:$white;
+  // background-color: $Black;
+  color: $white;
   & section:nth-child(1) {
     background-color: #2cbcb2;
   }
@@ -23,34 +25,32 @@ body{
     background-color: #d44e28;
   }
 
-  
-  .mission{
+  .mission {
     position: relative;
     height: calc(100vh - 10vh);
-    
-   .box  {
-    outline: none;
-    color: $white;
-    background-color: transparent;
-    border-radius: 50%;
-    border: 1px solid $white;
-    height: 65px;
-    width: 65px;
-     position: absolute;
-     cursor: pointer;
-     top: 90%;
-     left: 50%;
-    transform: translate(-50%,-50%);
-    &:hover{
-      background-color: $white;
-      color: #2cbcb2;
-      
+
+    .box {
+      outline: none;
+      color: $white;
+      background-color: transparent;
+      border-radius: 50%;
+      border: 1px solid $white;
+      height: 65px;
+      width: 65px;
+      position: absolute;
+      cursor: pointer;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      &:hover {
+        background-color: $white;
+        color: #2cbcb2;
+      }
     }
- }
-    }
-    .promise{
-      height: 100vh;
-      position: relative;
+  }
+  .promise {
+    height: 100vh;
+    position: relative;
     .box1 {
       color: $white;
       background-color: transparent;
@@ -61,29 +61,25 @@ body{
       outline: none;
       cursor: pointer;
       position: absolute;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
       top: 90%;
       left: 50%;
-      &:hover{
+      &:hover {
         background-color: $white;
         color: #242021;
-        
       }
     }
   }
 
-  .essence{
+  .essence {
     height: 100vh;
   }
 
-  
-
-  .mission, .promise, .essence {
-  
-    
-   
+  .mission,
+  .promise,
+  .essence {
     padding: 30px;
-    
+
     width: 100vw;
     scroll-snap-align: center;
     background-color: black;
@@ -91,66 +87,70 @@ body{
       text-align: center;
       text-transform: uppercase;
     }
-    p{
-      
-       margin: 30vh 0;
+    p {
+      margin: 30vh 0;
     }
   }
-  p{
+  p {
     line-height: 3em;
-    padding: 0 200px;
+    padding: 0 150px;
     letter-spacing: 1px;
     font-size: 20px;
-   
   }
   div {
     cursor: pointer;
   }
- 
+
   .arrow {
     border: none;
     outline: none;
-   position: absolute;
+    position: absolute;
     bottom: 4%;
     right: 4%;
     .fas.fa-angle-double-up {
       background-color: #d44e28;
       color: $white;
-      padding:8px;
+      padding: 8px;
       height: 50px;
       width: 50px;
+      margin-right: 0;
       // border: 1px solid $light-grey;
-      
     }
-    .fas.fa-angle-double-up:hover{
+    .fas.fa-angle-double-up:hover {
       border: 1px solid $white;
       cursor: pointer;
     }
   }
-
- 
-  
-}   
+}
 
 @keyframes animate {
-  0%{
+  0% {
     opacity: 0;
-    transform: rotate(45deg) translate(-20px,-20px);
+    transform: rotate(45deg) translate(-20px, -20px);
   }
-  50%{
+  50% {
     opacity: 1;
   }
-  100%{
+  100% {
     opacity: 0;
-    transform: rotate(45deg) translate(20px,20px);
+    transform: rotate(45deg) translate(20px, 20px);
   }
 }
 
-@media (max-width: 700px){
-  .about p{
+@media (max-width: 700px) {
+  .about p {
     line-height: 2em;
-    padding: 0 70px;
+    padding: 0 50px;
   }
 }
 
-
+@media (max-width: 500px) {
+  .about p {
+    line-height: 1.5em;
+    font-size: 16px;
+    padding: 0 30px;
+  }
+  .about .temp {
+    margin-right: 0;
+  }
+}
