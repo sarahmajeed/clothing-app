@@ -90,22 +90,25 @@ function IndividualTrouser({
             </div>
             <div className="product-details">
               <div className="product-left">
-                <div className="product-info">
-                  <div className="product-manufacturer">ELEGANT</div>
-                  <div className="product-title">{indTrouser.tag}</div>
-                  <div className="product-price">
-                    Rs: {indTrouser.trouserprice}
-                    <span className="product-price-cents">00</span>
-                  </div>
-                </div>
                 <div className="product-image">
                   <img src={indTrouser.trouserimg} alt="1" />
                 </div>
               </div>
               <div className="product-right">
+                <div className="product-info">
+                  <div className="product-manufacturer">ELEGANT</div>
+                  <div className="product-title">{indTrouser.tag}</div>
+                  <div className="product-price">
+                    Rs: {indTrouser.trouserprice}
+                  </div>
+                </div>
                 <div className="product-description">
                   {indTrouser.description}
                 </div>
+                <br />
+                <label className="product-color-label">
+                  {indTrouser.color}
+                </label>
                 <div className="product-available">
                   {" "}
                   {isSmall
@@ -119,9 +122,6 @@ function IndividualTrouser({
                   <div className="hid">Please Select a size</div>
                 </div>
                 <div className="product-color">
-                  <label className="product-color-label">
-                    {indTrouser.color}
-                  </label>
                   <div className="product-color-shades">
                     <ul>
                       <li onClick={handleSmall} className="red">
@@ -163,9 +163,9 @@ function IndividualTrouser({
                 <div className="product-checkout">
                   Total Price
                   <div className="product-checkout-total">
-                    <i className="fa fa-usd"></i>
+                    <i className=""></i>
                     <div className="product-checkout-total-amount">
-                      {trouserPrice}
+                      {"RS: " + trouserPrice}
                     </div>
                   </div>
                 </div>

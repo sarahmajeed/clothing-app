@@ -1,32 +1,27 @@
-@import './styles/colors';
+@import "./styles/colors";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  }
+}
 
 .App {
-  
   text-align: center;
   position: relative;
   min-height: 100vh;
   overflow: hidden;
 }
 
-
 .footer {
   width: 100vw;
-  position: absolute;
-  background-color: #1B1D1E;
+  position: fixed;
+  background-color: #1b1d1e;
   color: $dark-grey;
   padding: 15px;
   bottom: 0;
-  z-index: 20;
-  .copyright  {
-    
+  z-index: 0;
+  .copyright {
     color: $grey;
   }
 }
-
-

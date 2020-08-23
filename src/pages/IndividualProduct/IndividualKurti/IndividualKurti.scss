@@ -78,8 +78,11 @@ a:hover {
   top: 0;
   width: 100vw;
   z-index: 20;
+  overflow-y: scroll;
 }
-
+.product-color-label {
+  font-weight: bold;
+}
 .pop-up-container {
   height: 100%;
   width: auto;
@@ -149,6 +152,8 @@ a:hover {
 }
 
 .product-right {
+  justify-content: center;
+  text-align: center;
   display: inline-block;
   vertical-align: top;
   width: 49%;
@@ -173,7 +178,7 @@ a:hover {
     display: inline-block;
     width: 60%;
     vertical-align: top;
-    text-align: left;
+    text-align: center;
   }
   .product-image {
     display: inline-block;
@@ -191,24 +196,24 @@ a:hover {
 
 .product-manufacturer {
   color: #222;
-  font-size: 48px;
+  font-size: 32px;
   font-weight: bold;
   line-height: 1;
   margin: -2px;
-  text-align: left;
+  text-align: center;
 }
 
 .product-title {
   font-size: 28px;
   color: #888;
-  text-align: left;
+  text-align: center;
 }
 
 .product-price {
   color: #222;
   font-size: 24px;
   letter-spacing: 1px;
-  text-align: left;
+  text-align: center;
 }
 
 .product-price-cents {
@@ -229,8 +234,11 @@ a:hover {
 }
 
 .product-description {
-  text-align: justify;
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: center;
   line-height: 1.5;
+  box-shadow: 1px 1px 9px rgb(165, 163, 163);
 }
 
 .product-available {
@@ -241,6 +249,7 @@ a:hover {
     display: none;
   }
   .hid.visible {
+    justify-content: center;
     display: block;
   }
 }
@@ -292,8 +301,8 @@ i.fa-star.rating {
         justify-content: center;
         width: 40px;
         height: 40px;
-        border: 1px solid black;
-        padding-top: 8px;
+        border: 1.5px solid black;
+        padding-top: 11px;
         margin-left: 10px;
         &:hover {
           cursor: pointer;
@@ -327,6 +336,7 @@ i.fa-star.rating {
 /* 6. Components - buttons, menus, images, etc. */
 .product-quantity-label {
   text-transform: uppercase;
+  margin-left: 10px;
 }
 .product-quantity * {
   display: inline-block;

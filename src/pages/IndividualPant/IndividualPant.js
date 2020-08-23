@@ -20,7 +20,7 @@ function IndividualPant({
   const [indPant, setIndPant] = useState([]);
   useEffect(() => {
     fetch(
-      `http://ec2-15-206-93-116.ap-south-1.compute.amazonaws.com:5000/firebase men/pants/${id}`,
+      `http://ec2-15-206-93-116.ap-south-1.compute.amazonaws.com:5000/men/pants/${id}`,
       {
         method: "get",
         headers: { "Content-Type": "application/json" },
@@ -81,20 +81,19 @@ function IndividualPant({
             </div>
             <div className="product-details">
               <div className="product-left">
-                <div className="product-info">
-                  <div className="product-manufacturer">ELEGANT</div>
-                  <div className="product-title">{indPant.tag}</div>
-                  <div className="product-price">
-                    Rs: {indPant.pantprice}
-                    <span className="product-price-cents">00</span>
-                  </div>
-                </div>
                 <div className="product-image">
                   <img src={indPant.pantimg} alt="1" />
                 </div>
               </div>
               <div className="product-right">
+                <div className="product-info">
+                  <div className="product-manufacturer">ELEGANT</div>
+                  <div className="product-title">{indPant.tag}</div>
+                  <div className="product-price">Rs: {indPant.pantprice}</div>
+                </div>
                 <div className="product-description">{indPant.description}</div>
+                <br />
+                <label className="product-color-label">{indPant.color}</label>
                 <div className="product-available">
                   {isSmall
                     ? `${indPant.smallquantity} In stock.`
@@ -107,7 +106,6 @@ function IndividualPant({
                   <div className="hid">Please Select a size</div>
                 </div>
                 <div className="product-color">
-                  <label className="product-color-label">{indPant.color}</label>
                   <div className="product-color-shades">
                     <ul>
                       <li onClick={handleSmall} className="red">
@@ -149,9 +147,9 @@ function IndividualPant({
                 <div className="product-checkout">
                   Total Price
                   <div className="product-checkout-total">
-                    <i className="fa fa-usd"></i>
+                    <i className=""></i>
                     <div className="product-checkout-total-amount">
-                      {pantPrice}
+                      {"RS: " + pantPrice}
                     </div>
                   </div>
                 </div>

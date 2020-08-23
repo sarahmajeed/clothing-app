@@ -83,22 +83,24 @@ function IndividualKurti({
             </div>
             <div className="product-details">
               <div className="product-left">
-                <div className="product-info">
-                  <div className="product-manufacturer">ELEGANT</div>
-                  <div className="product-title">{indKurti.tag}</div>
-                  <div className="product-price">
-                    Rs: {indKurti.kurtiprice}
-                    <span className="product-price-cents">00</span>
-                  </div>
-                </div>
                 <div className="product-image">
                   <img src={indKurti.kurtiimg} alt="1" />
                 </div>
               </div>
               <div className="product-right">
+                <div className="product-info">
+                  <div className="product-manufacturer">ELEGANT</div>
+                  <div className="product-title">{indKurti.tag}</div>
+                  <div className="product-price">Rs: {indKurti.kurtiprice}</div>
+                </div>
                 <div className="product-description">
                   {indKurti.description}
                 </div>
+                <br />
+                <label className="product-color-label">
+                  {"Color: " + indKurti.color}
+                </label>
+                <br />
                 <div className="product-available">
                   {isSmall
                     ? `${indKurti.smallquantity} In stock.`
@@ -112,9 +114,6 @@ function IndividualKurti({
                 </div>
 
                 <div className="product-color">
-                  <label className="product-color-label">
-                    {indKurti.color}
-                  </label>
                   <div className="product-color-shades">
                     <ul>
                       <li onClick={handleSmall} className="red">
@@ -156,9 +155,8 @@ function IndividualKurti({
                 <div className="product-checkout">
                   Total Price
                   <div className="product-checkout-total">
-                    <i className="fa fa-usd"></i>
                     <div className="product-checkout-total-amount">
-                      {kurtiPrice}
+                      {" Rs: " + kurtiPrice}
                     </div>
                   </div>
                 </div>

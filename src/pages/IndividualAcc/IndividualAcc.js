@@ -85,19 +85,16 @@ function IndividualAcc({
             </div>
             <div className="product-details">
               <div className="product-left">
-                <div className="product-info">
-                  <div className="product-manufacturer">ELEGANT</div>
-                  <div className="product-title">{indAcc.tag}</div>
-                  <div className="product-price">
-                    Rs: {indAcc.accprice}
-                    <span className="product-price-cents">00</span>
-                  </div>
-                </div>
                 <div className="product-image">
                   <img src={indAcc.accimg} alt="1" />
                 </div>
               </div>
               <div className="product-right">
+                <div className="product-info">
+                  <div className="product-manufacturer">ELEGANT</div>
+                  <div className="product-title">{indAcc.tag}</div>
+                  <div className="product-price">Rs: {indAcc.accprice}</div>
+                </div>
                 <div className="product-description">{indAcc.description}</div>
                 <div className="product-available">
                   {`${indAcc.quantity} in stock`}
@@ -146,9 +143,9 @@ function IndividualAcc({
                 <div className="product-checkout">
                   Total Price
                   <div className="product-checkout-total">
-                    <i className="fa fa-usd"></i>
+                    <i className=""></i>
                     <div className="product-checkout-total-amount">
-                      {accPrice}
+                      {"RS: " + accPrice}
                     </div>
                   </div>
                 </div>
