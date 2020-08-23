@@ -1,8 +1,8 @@
-* {
-  box-sizing: border-box;
-  font-family: Montserrat;
-  font-size: 14px;
-}
+// * {
+//   box-sizing: border-box;
+//   font-family: Montserrat;
+//   font-size: 14px;
+// }
 
 ::selection {
   background-color: white;
@@ -78,7 +78,6 @@ a:hover {
   top: 0;
   width: 100vw;
   z-index: 20;
-  overflow-y: scroll;
 }
 .product-color-label {
   font-weight: bold;
