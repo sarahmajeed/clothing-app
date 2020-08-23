@@ -28,6 +28,9 @@ nav {
     letter-spacing: 3px;
     font-size: 20px;
     display: flex;
+    .link {
+      text-decoration: none;
+    }
     cursor: pointer;
     a {
       display: inline-flex;
@@ -91,10 +94,12 @@ nav {
     z-index: 18;
     background: black;
     color: white;
+    text-decoration: none;
 
     &:hover {
       //Styling of dropdown content on hover
       background: white;
+      text-decoration: none;
       color: black;
     }
   }

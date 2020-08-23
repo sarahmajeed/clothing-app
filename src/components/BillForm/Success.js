@@ -44,7 +44,7 @@ export class Success extends Component {
             <br /> we'll be in touch shortly!
           </p>
           <button className="btn" onClick={this.jsPDFGnerator}>
-            GENERATE PDF
+            GENERATE RECEIPT
           </button>
         </div>
       </div>
