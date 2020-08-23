@@ -4,7 +4,15 @@ import "./FormPersonalDetails.scss";
 export class FormPersonalDetails extends Component {
   continue = (e) => {
     e.preventDefault();
-    this.props.nextStep();
+    if (
+      this.props.value.Email === "" ||
+      this.props.value.Address === "" ||
+      this.props.value.PhoneNumber === ""
+    ) {
+      alert("Please enter information");
+    } else {
+      this.props.nextStep();
+    }
   };
 
   render() {

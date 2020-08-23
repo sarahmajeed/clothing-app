@@ -9,7 +9,11 @@ export class Confirm extends Component {
   }
   continue = (e) => {
     e.preventDefault();
-    this.props.nextStep();
+    if (this.props.value.CardNumber === "") {
+      alert("Please enter card number");
+    } else {
+      this.props.nextStep();
+    }
   };
   previous = (e) => {
     e.preventDefault();
