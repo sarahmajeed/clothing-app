@@ -21,25 +21,29 @@ class Signin extends Component {
 
   handleSignin = (event) => {
     event.preventDefault();
-    fetch(
-      "http://ec2-15-206-93-116.ap-south-1.compute.amazonaws.com:5000/signin",
-      {
-        method: "post",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: this.state.email,
-          password: this.state.password,
-        }),
-      }
-    )
-      .then((res) => res.json())
-      .then((user) => {
-        console.log(user);
-        if (user) {
-          this.props.loadUser(user);
-          this.props.routeProps.history.push("/");
+    if (this.state.email === "" || this.state.password === "") {
+      alert("Please enter information");
+    } else {
+      fetch(
+        "http://ec2-15-206-93-116.ap-south-1.compute.amazonaws.com:5000/signin",
+        {
+          method: "post",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email: this.state.email,
+            password: this.state.password,
+          }),
         }
-      });
+      )
+        .then((res) => res.json())
+        .then((user) => {
+          console.log(user);
+          if (user) {
+            this.props.loadUser(user);
+            this.props.routeProps.history.push("/");
+          }
+        });
+    }
   };
 
   render() {
