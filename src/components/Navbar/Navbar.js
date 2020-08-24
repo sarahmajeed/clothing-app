@@ -41,7 +41,13 @@ const Navbar = () => {
 
       <ul className="nav-links">
         <li className="dropdown">
-          <a className="navitem droptag" href="#">
+          <a
+            className="navitem droptag"
+            href
+            onClick={(e) => {
+              e.preventDefault();
+            }}
+          >
             WOMEN
           </a>
           <i className="fa fa-caret-down"></i>
@@ -53,7 +59,13 @@ const Navbar = () => {
 
         <div className="dropdown">
           <li>
-            <a className="navitem droptag" href="#">
+            <a
+              className="navitem droptag"
+              href
+              onClick={(e) => {
+                e.preventDefault();
+              }}
+            >
               MEN
             </a>
             <i className="fa fa-caret-down"></i>
