@@ -37,25 +37,7 @@ function IndividualAcc({
       setQuantity(quantity + 1);
       setAccPrice(parseInt(accPrice) + parseInt(indAcc.accprice));
     }
-    // if (isSmall === true) {
-    //   if (quantity < indAcc.smallquantity) {
-    //     setQuantity(quantity + 1);
-    //     setAccPrice(parseInt(accPrice) + parseInt(indAcc.accprice));
-    //   }
-    // } else if (isMedium === true) {
-    //   if (quantity < indAcc.mediumquantity) {
-    //     setQuantity(quantity + 1);
-    //     setAccPrice(parseInt(accPrice) + parseInt(indAcc.accprice));
-    //   }
-    // } else if (isLarge === true) {
-    //   if (quantity < indAcc.largequantity) {
-    //     setQuantity(quantity + 1);
-    //     setAccPrice(parseInt(accPrice) + parseInt(indAcc.accprice));
-    //   }
-    else {
-      const hidden = document.querySelector(".hid");
-      hidden.classList.add("visible");
-    }
+
     console.log("handle right working");
   };
   const handleLeft = () => {
@@ -97,8 +79,7 @@ function IndividualAcc({
                 </div>
                 <div className="product-description">{indAcc.description}</div>
                 <div className="product-available">
-                  {quantity === 0 ? null : `${indAcc.quantity} in stock`}
-                  <div className="hid">Please Select a size</div>
+                  {`${indAcc.quantity} in stock`}
                 </div>
                 <div className="product-color">
                   <label className="product-color-label">{indAcc.color}</label>
