@@ -168,6 +168,12 @@ function App() {
             updateLarge={() => {
               setIsLarge(false);
             }}
+            updateQuantity={() => {
+              setQuantity(0);
+            }}
+            updateKurtiPrice={() => {
+              setKurtiPrice(0);
+            }}
           />
         )}
       />
@@ -184,6 +190,12 @@ function App() {
             }}
             updateLarge={() => {
               setIsLarge(false);
+            }}
+            updateQuantity={() => {
+              setQuantity(0);
+            }}
+            updateTrouserPrice={() => {
+              setTrouserPrice(0);
             }}
           />
         )}
@@ -202,6 +214,12 @@ function App() {
             updateLarge={() => {
               setIsLarge(false);
             }}
+            updateQuantity={() => {
+              setQuantity(0);
+            }}
+            updatePantPrice={() => {
+              setPantPrice(0);
+            }}
           />
         )}
       />
@@ -218,6 +236,12 @@ function App() {
             }}
             updateLarge={() => {
               setIsLarge(false);
+            }}
+            updateQuantity={() => {
+              setQuantity(0);
+            }}
+            updateShirtPrice={() => {
+              setShirtPrice(0);
             }}
           />
         )}
@@ -236,10 +260,26 @@ function App() {
             updateLarge={() => {
               setIsLarge(false);
             }}
+            updateQuantity={() => {
+              setQuantity(0);
+            }}
           />
         )}
       />
-      <Route exact path="/accessories" render={() => <Accessories />} />
+      <Route
+        exact
+        path="/accessories"
+        render={() => (
+          <Accessories
+            updateQuantity={() => {
+              setQuantity(0);
+            }}
+            updateAccPrice={() => {
+              setAccPrice(0);
+            }}
+          />
+        )}
+      />
       <Route
         exact
         path="/women/kurtis/:id"

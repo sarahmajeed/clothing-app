@@ -2,7 +2,13 @@ import React, { useEffect, useState } from "react";
 import TrouserList from "../Lists/TrouserList/TrouserList";
 import SearchBox from "../SearchBox/SearchBox";
 
-function WomenTrousers({ updateSmall, updateLarge, updateMedium }) {
+function WomenTrousers({
+  updateSmall,
+  updateLarge,
+  updateMedium,
+  updateQuantity,
+  updateTrouserPrice,
+}) {
   const [trousers, setTrousers] = useState([]);
   const [search, setSearch] = useState("");
 
@@ -10,6 +16,8 @@ function WomenTrousers({ updateSmall, updateLarge, updateMedium }) {
     updateSmall();
     updateLarge();
     updateMedium();
+    updateQuantity();
+    updateTrouserPrice();
     fetch(
       "http://ec2-15-206-93-116.ap-south-1.compute.amazonaws.com:5000/women/trousers",
       {

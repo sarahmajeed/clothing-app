@@ -3,7 +3,13 @@ import KurtiList from "../Lists/KurtiList/KurtiList";
 
 import SearchBox from "../SearchBox/SearchBox";
 
-function WomenKurtis({ updateSmall, updateMedium, updateLarge }) {
+function WomenKurtis({
+  updateSmall,
+  updateMedium,
+  updateLarge,
+  updateQuantity,
+  updateKurtiPrice,
+}) {
   const [kurtis, setKurtis] = useState([]);
   const [search, setSearch] = useState("");
 
@@ -11,6 +17,8 @@ function WomenKurtis({ updateSmall, updateMedium, updateLarge }) {
     updateSmall();
     updateMedium();
     updateLarge();
+    updateQuantity();
+    updateKurtiPrice();
     fetch(
       "http://ec2-15-206-93-116.ap-south-1.compute.amazonaws.com:5000/women/kurtis",
       {

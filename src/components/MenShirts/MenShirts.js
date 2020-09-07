@@ -2,7 +2,13 @@ import React, { useEffect, useState } from "react";
 import ShirtList from "../Lists/ShirtList/ShirtList";
 import SearchBox from "../SearchBox/SearchBox";
 
-function MenShirts({ updateSmall, updateMedium, updateLarge }) {
+function MenShirts({
+  updateSmall,
+  updateMedium,
+  updateLarge,
+  updateQuantity,
+  updateShirtPrice,
+}) {
   const [shirts, setShirts] = useState([]);
   const [search, setSearch] = useState("");
 
@@ -10,6 +16,8 @@ function MenShirts({ updateSmall, updateMedium, updateLarge }) {
     updateSmall();
     updateLarge();
     updateMedium();
+    updateQuantity();
+    updateShirtPrice();
     fetch(
       "http://ec2-15-206-93-116.ap-south-1.compute.amazonaws.com:5000/men/shirts",
       {
