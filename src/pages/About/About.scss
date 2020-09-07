@@ -86,9 +86,11 @@ body {
     h1 {
       text-align: center;
       text-transform: uppercase;
+      animation: sectionanimate 1s;
     }
     p {
       margin: 30vh 0;
+      animation: paraanimate 2s;
     }
   }
   p {
@@ -152,5 +154,32 @@ body {
   }
   .about .temp {
     margin-right: 0;
+  }
+}
+
+@keyframes sectionanimate {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes paraanimate {
+  0% {
+    transform: translateX(110%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
