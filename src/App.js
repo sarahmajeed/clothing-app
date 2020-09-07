@@ -157,7 +157,13 @@ function App() {
       <Route
         exact
         path="/women/kurtis"
-        render={(routeProps) => <WomenKurtis />}
+        render={(routeProps) => (
+          <WomenKurtis
+            updatestate={() => {
+              setIsSmall(false);
+            }}
+          />
+        )}
       />
       <Route exact path="/women/trousers" render={() => <WomenTrousers />} />
       <Route exact path="/men/pants" render={() => <MenPants />} />
