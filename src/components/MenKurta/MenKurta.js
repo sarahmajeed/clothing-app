@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import KurtaList from "../Lists/KurtaList/KurtaList";
 import SearchBox from "../SearchBox/SearchBox";
 
-function MenKurta() {
+function MenKurta({ updateSmall, updateLarge, updateMedium }) {
   const [kurtas, setKurtas] = useState([]);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
+    updateSmall();
+    updateLarge();
+    updateMedium();
     fetch(
       "http://ec2-15-206-93-116.ap-south-1.compute.amazonaws.com:5000/men/kurta",
       {

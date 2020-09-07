@@ -3,12 +3,14 @@ import KurtiList from "../Lists/KurtiList/KurtiList";
 
 import SearchBox from "../SearchBox/SearchBox";
 
-function WomenKurtis({ updatestate }) {
+function WomenKurtis({ updateSmall, updateMedium, updateLarge }) {
   const [kurtis, setKurtis] = useState([]);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    updatestate();
+    updateSmall();
+    updateMedium();
+    updateLarge();
     fetch(
       "http://ec2-15-206-93-116.ap-south-1.compute.amazonaws.com:5000/women/kurtis",
       {

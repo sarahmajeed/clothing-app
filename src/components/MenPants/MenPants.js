@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import PantList from "../Lists/PantList/PantList";
 import SearchBox from "../SearchBox/SearchBox";
 
-function MenPants() {
+function MenPants({ updateSmall, updateLarge, updateMedium }) {
   const [pants, setPants] = useState([]);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
+    updateSmall();
+    updateLarge();
+    updateMedium();
     fetch(
       "http://ec2-15-206-93-116.ap-south-1.compute.amazonaws.com:5000/men/pants",
       {

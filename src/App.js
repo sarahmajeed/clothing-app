@@ -159,16 +159,86 @@ function App() {
         path="/women/kurtis"
         render={(routeProps) => (
           <WomenKurtis
-            updatestate={() => {
+            updateSmall={() => {
               setIsSmall(false);
+            }}
+            updateMedium={() => {
+              setIsMedium(false);
+            }}
+            updateLarge={() => {
+              setIsLarge(false);
             }}
           />
         )}
       />
-      <Route exact path="/women/trousers" render={() => <WomenTrousers />} />
-      <Route exact path="/men/pants" render={() => <MenPants />} />
-      <Route exact path="/men/shirts" render={() => <MenShirts />} />
-      <Route exact path="/men/kurta" render={() => <MenKurta />} />
+      <Route
+        exact
+        path="/women/trousers"
+        render={() => (
+          <WomenTrousers
+            updateSmall={() => {
+              setIsSmall(false);
+            }}
+            updateMedium={() => {
+              setIsMedium(false);
+            }}
+            updateLarge={() => {
+              setIsLarge(false);
+            }}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/men/pants"
+        render={() => (
+          <MenPants
+            updateSmall={() => {
+              setIsSmall(false);
+            }}
+            updateMedium={() => {
+              setIsMedium(false);
+            }}
+            updateLarge={() => {
+              setIsLarge(false);
+            }}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/men/shirts"
+        render={() => (
+          <MenShirts
+            updateSmall={() => {
+              setIsSmall(false);
+            }}
+            updateMedium={() => {
+              setIsMedium(false);
+            }}
+            updateLarge={() => {
+              setIsLarge(false);
+            }}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/men/kurta"
+        render={() => (
+          <MenKurta
+            updateSmall={() => {
+              setIsSmall(false);
+            }}
+            updateMedium={() => {
+              setIsMedium(false);
+            }}
+            updateLarge={() => {
+              setIsLarge(false);
+            }}
+          />
+        )}
+      />
       <Route exact path="/accessories" render={() => <Accessories />} />
       <Route
         exact
