@@ -74,6 +74,12 @@ body {
   .essence {
     height: 100vh;
   }
+  .our-mission {
+    animation: sectionanimate 1s;
+  }
+  .our-mission-para {
+    animation: paraanimate 2s;
+  }
 
   .mission,
   .promise,
@@ -86,11 +92,9 @@ body {
     h1 {
       text-align: center;
       text-transform: uppercase;
-      animation: sectionanimate 1s;
     }
     p {
       margin: 30vh 0;
-      animation: paraanimate 2s;
     }
   }
   p {
@@ -101,6 +105,13 @@ body {
   }
   div {
     cursor: pointer;
+  }
+
+  .final-animation-h1 {
+    animation: sectionanimate 1s;
+  }
+  .final-animation-para {
+    animation: paraanimate 2s;
   }
 
   .arrow {
